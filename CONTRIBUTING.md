@@ -1,10 +1,8 @@
 # Welcome to our contributing guide
----
 Currently this project is being developed by FHICT GDT students, but perhaps in the near future others would like to contribute.
 This page will give you an overview of the contribution workflow from opening an issue to merging you changes.
 
 ## New contributor guide
----
 To get an overview of the project, read the README. Here are some resources to help you get started with open source contributions:
 
 - [Finding ways to contribute to open source on GitHub](https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github)
@@ -13,7 +11,6 @@ To get an overview of the project, read the README. Here are some resources to h
 - [Collaborating with pull requests](https://docs.github.com/en/github/collaborating-with-pull-requests)
 
 ## Getting started
----
 ### Issues
 #### Create a new issue
 
@@ -29,7 +26,6 @@ Scan through our [existing issues](https://github.com/Extiriority/Industry-Proje
 
 #### Make changes locally
 -- No info currently --
-
 
 ### Pull Request
 #### Work from a feature branch
