@@ -44,3 +44,16 @@ Before your changes will get submitted to the it should be reviewed by at least 
 - If you run into any merge issues, checkout this [git tutorial](https://lab.github.com/githubtraining/managing-merge-conflicts) to help you resolve merge conflicts and other issues.
 
 ### Your PR is merged!!! :partying_face: :partying_face:
+
+## For members
+The project is being developed with an Agile proces. We work in sprints of two weeks.
+
+#### Branch name
+Each branch should be related to a issue or user story.
+The branch should be named according to the feature you are willing to implement:
+- `<type>[optional scope]: <description>`
+
+
+### Commit Policy
+- Commits must have describing titles. 
+
