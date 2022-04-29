@@ -57,3 +57,4 @@ The branch should be named according to the feature you are willing to implement
 ### Commit Policy
 - Commits must have describing titles. 
 
+#### Written by project group 9
