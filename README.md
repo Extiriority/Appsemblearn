@@ -2,7 +2,7 @@
 GDT 2022 Third and last [project](https://github.com/Extiriority/Industry-Project-9) about working with stakeholders
 <img align="right" src="https://i.imgur.com/z63oDhM.png" width=10%/>
 
-This application helps onboarding people into [Appsemple](https://appsemble.com/en/) specifically for post-secondary vocational education niveau 4 in a gamification manner.
+This application helps onboarding people into [Appsemple](https://appsemble.com/en/) specifically for post-secondary vocational education level 4 in a gamification manner.
 
 ## Goals
 
