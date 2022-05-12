@@ -6,9 +6,10 @@ This application helps onboarding people into [Appsemple](https://appsemble.com/
 
 ## Goals
 
-* Learn and accelerate how to code blocks by creating an app recipe in a human readable (YAML / JSON) type in a tutorial like gamification principle manner.
+* Learn and accelerate how to code by creating an app recipe in a fun human readable multiple paths of programming type in a tutorial like gamification principle manner.
+* Understand the basic principles of code and design with problem solving incorporated and master CSS and HTML
 * A general framework to build on for having a fun and educational tutorial manner.
-* easy to share, copy and customize.
+* easy to share, copy and customize courses.
 
 ## Contributing
 
