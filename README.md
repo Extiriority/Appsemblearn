@@ -14,4 +14,4 @@ This application helps onboard people into [Appsemple](https://appsemble.com/en/
 
 ## Contributing
 
-If you're interested in contributing to Industry-Project-9, please read our [contributing docs](https://github.com/Extiriority/Industry-Project-9/blob/main/CONTRIBUTING.md) **before submitting a pull request**.
+If you are interested in contributing to Industry-Project-9, please read our [contributing docs](https://github.com/Extiriority/Industry-Project-9/blob/main/CONTRIBUTING.md) **before submitting a pull request**.
