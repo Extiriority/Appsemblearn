@@ -43,10 +43,10 @@ Before your changes will get submitted to the it should be reviewed by at least 
 - As you update your PR and apply changes, mark each conversation as [resolved](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations).
 - If you run into any merge issues, checkout this [git tutorial](https://lab.github.com/githubtraining/managing-merge-conflicts) to help you resolve merge conflicts and other issues.
 
-### Your PR is merged!!! :partying_face: :partying_face:
+### Your PR is merged!!! 🥳🥳
 
 ## For members
-The project is being developed with an Agile proces. We work in sprints of two weeks.
+The project is being developed with an Agile process. We work in sprints of two weeks.
 
 #### Branch name
 Each branch should be related to a issue or user story.
