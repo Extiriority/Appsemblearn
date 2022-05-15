@@ -1,8 +1,9 @@
-# Industry-Project-9
-GDT 2022 Third and last [project](https://github.com/Extiriority/Industry-Project-9) about working with stakeholders
-<img align="right" src="https://i.imgur.com/z63oDhM.png" width=10%/>
+# Appsemblearn
+<img align="right" src="https://i.imgur.com/z63oDhM.png" width=10%/  alt="appLogo">
 
-This application helps onboarding people into [Appsemple](https://appsemble.com/en/) specifically for post-secondary vocational education level 4 in a gamification manner.
+#### GDT 2022 Third and final [project](https://github.com/Extiriority/Industry-Project-9) about working with stakeholders
+
+This application helps onboard people into [Appsemple](https://appsemble.com/en/) specifically for post-secondary vocational education level 4 in a gamification manner. You can read more details about our game in our one page [Game Design Document](https://giang-1.gitbook.io/portfolio/industry-project/game-design-document).
 
 ## Goals
 

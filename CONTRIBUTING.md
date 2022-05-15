@@ -1,6 +1,6 @@
 # Welcome to our contributing guide
-Currently this project is being developed by FHICT GDT students, but perhaps in the near future others would like to contribute.
-This page will give you an overview of the contribution workflow from opening an issue to merging you changes.
+This project is founded and currently being developed by FHICT GDT2022 group-9 students, but perhaps others would like to help in the near future, as this is an open source project.
+In this page, you will be given an overview of the contribution workflow from opening an issue to merging you changes.
 
 ## New contributor guide
 To get an overview of the project, read the [README](https://github.com/Extiriority/Industry-Project-9/blob/main/README.md). Here are some resources to help you get started with open source contributions:
@@ -23,7 +23,7 @@ Scan through our [existing issues](https://github.com/Extiriority/Industry-Proje
 #### Versions
 --
 
-#### Prerequisites 
+#### Prerequisites
 --
 
 #### Make changes locally
@@ -55,6 +55,4 @@ The branch should be named according to the feature you are willing to implement
 
 
 ### Commit Policy
-- Commits must have describing titles. 
-
-#### Written by project group 9
+- Commits must have describing titles.
