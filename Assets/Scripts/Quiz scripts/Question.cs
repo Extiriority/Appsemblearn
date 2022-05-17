@@ -6,7 +6,6 @@ using UnityEngine;
 public class Question : ScriptableObject
 {
     public string questionString;
-
     public List<Answer> answers;
 
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Answer : ScriptableObject
 {
-    [SerializeField] string answerString;
-    [SerializeField] bool isCorrect;
+    public string answerString;
+    public bool isCorrect;
+
 }

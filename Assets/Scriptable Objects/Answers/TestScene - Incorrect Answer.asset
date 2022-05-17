@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dafd87346ecf8f4f8f83e4fa0bb8d9d, type: 3}
   m_Name: TestScene - Incorrect Answer
   m_EditorClassIdentifier: 
-  answerString: Nee
+  answerString: Je moeder
   isCorrect: 0
