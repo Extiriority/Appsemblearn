@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2bf1144169a2047b130573e6ca0d57, type: 3}
+  m_Name: TestScene - Question 1
+  m_EditorClassIdentifier: 
+  questionString: Ben jij slim?
+  answers:
+  - {fileID: 11400000, guid: c75f2e7d5d07a0b4eb9439fc12d9844d, type: 2}
+  - {fileID: 11400000, guid: 06cd5a995b4e1aa47a011f96aef69d07, type: 2}
