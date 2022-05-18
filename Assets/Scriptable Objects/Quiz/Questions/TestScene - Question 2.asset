@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2bf1144169a2047b130573e6ca0d57, type: 3}
+  m_Name: TestScene - Question 2
+  m_EditorClassIdentifier: 
+  questionString: Weet jij het antwoord op vraag 2?
+  answers:
+  - {fileID: 11400000, guid: a7120c6bf48d61246819854e6289e38a, type: 2}
+  - {fileID: 11400000, guid: 4f43cd38ea691a74482511dfc33e5752, type: 2}
+  - {fileID: 11400000, guid: 0f0972f050bc96741bab7e7a2fb7bd3b, type: 2}
+  - {fileID: 11400000, guid: 9ae5f9f8b271a48428f2df6a0fae8e56, type: 2}

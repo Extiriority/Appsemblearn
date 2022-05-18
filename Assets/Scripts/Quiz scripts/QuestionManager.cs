@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class QuestionManager : MonoBehaviour
 {
     //Current question and answers.
     [SerializeField] Question question;
-    [SerializeField] List<Answer> answers;
-
-    // UI elements
-    List<GameObject> uiAnswers; 
+    [SerializeField] List<Question> questionList;
+    [SerializeField] Queue<Question> questionQueue;
 
     private void Start()
-    {  
-        //Ensures that the correct answers are displayed and are matched to the current question.
-        foreach (Answer answer in question.answers)
-        {
-            answers.Add(answer);
-        } 
-        
+    {
+        Queue<Question> _questionQueue = new Queue<Question>(questionList);
+
+        questionQueue = _questionQueue;
         BindingDataToUI();
     }
 
@@ -34,7 +30,7 @@ public class QuestionManager : MonoBehaviour
 
         int i = 1;
 
-        foreach (Answer answer in answers)
+        foreach (Answer answer in question.answers)
         {
             TextMeshProUGUI uiAnswer = GameObject.FindGameObjectWithTag("answer" + i).GetComponent<TextMeshProUGUI>();
 
@@ -50,11 +46,42 @@ public class QuestionManager : MonoBehaviour
     {
         if (answer.isCorrect == true)
         {
-            Debug.Log("correct");
+            AnswerResponse(answer);
+            NextQuestion();
         }
         else
         {
-            Debug.Log("Incorrect");
+            AnswerResponse(answer);
+            NextQuestion();
+        }
+    }
+
+    private void AnswerResponse(Answer answer)
+    {
+        // Gives a response based on whether the answer was correct of incorrect
+
+        //Based on the answer define next learning steps here.
+    }
+
+
+    /// <summary>
+    /// Sends the user to the next question in the queue.
+    /// </summary>
+    private void NextQuestion()
+    {     
+        for (int i = 0; i < questionList.Count; i++)
+        {
+            if (questionList.Count != 0) {
+                var next = questionQueue.Peek();
+                Debug.Log(next);
+                if (question != next)
+                {
+                    question = next;
+                    BindingDataToUI();
+                }
+            }
+
+            questionQueue.Dequeue();
         }
     }
 }
