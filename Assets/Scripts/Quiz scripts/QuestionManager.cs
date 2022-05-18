@@ -8,15 +8,20 @@ using System;
 public class QuestionManager : MonoBehaviour
 {
     //Current question and answers.
+    [Header("First question")]
     [SerializeField] Question question;
+
+    [Header("All questions in this scene")]
     [SerializeField] List<Question> questionList;
+
+    //Queue that is used to move through the questions in chronological order.
     [SerializeField] Queue<Question> questionQueue;
 
     private void Start()
     {
         Queue<Question> _questionQueue = new Queue<Question>(questionList);
-
         questionQueue = _questionQueue;
+
         BindingDataToUI();
     }
 
@@ -28,6 +33,7 @@ public class QuestionManager : MonoBehaviour
         TextMeshProUGUI uiQuestion = GameObject.FindGameObjectWithTag("question").GetComponent<TextMeshProUGUI>();
         uiQuestion.text = question.questionString;
 
+        //Index to fill in numbered answer buttons.
         int i = 1;
 
         foreach (Answer answer in question.answers)
@@ -46,21 +52,28 @@ public class QuestionManager : MonoBehaviour
     {
         if (answer.isCorrect == true)
         {
-            AnswerResponse(answer);
+            CorrectAnswer(answer);
             NextQuestion();
         }
         else
         {
-            AnswerResponse(answer);
+            IncorrectAnswer(answer);
             NextQuestion();
         }
     }
 
-    private void AnswerResponse(Answer answer)
+    private void IncorrectAnswer(Answer answer)
     {
-        // Gives a response based on whether the answer was correct of incorrect
+        // Correct answer message
 
         //Based on the answer define next learning steps here.
+    }
+
+    private void CorrectAnswer(Answer answer)
+    {
+        // Correct answer message
+
+
     }
 
 
