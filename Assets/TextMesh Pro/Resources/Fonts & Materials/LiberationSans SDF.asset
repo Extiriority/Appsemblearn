@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF Material
-  m_Shader: {fileID: 4800000, guid: 24bb4eb29f91f0c4a8f677f17ec94246, type: 3}
+  m_Shader: {fileID: 4800000, guid: c4553692747b02b4a8aa50af93a5a2e1, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 1
