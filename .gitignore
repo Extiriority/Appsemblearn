@@ -153,3 +153,17 @@ sysinfo.txt
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,rider
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/.idea.Appsemblearn.iml
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
