@@ -9,15 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2674d74245f7f52449594a55b6d6c264, type: 3}
+  m_Script: {fileID: 11500000, guid: ee061833eaebaa5478db1c893f29c31e, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
   dialogue:
-  - 'Hello! Welcome to Block Carnival Island!
+  - I dont know what you like, but I think I am in love with you. Even thought you
+    are ugly!
+  - 'All in all, thats true love, right? Oh well just let this relationship flow
+    I guess!
 
-    Follow me inside my main town
-    square,
-
-    And ill explain on the way!!!'
-  - "In the main square, you will find lots of things.\nThere are four ways to start
-    of your journey.\t\nEnjoy your stay!\n"
+'
