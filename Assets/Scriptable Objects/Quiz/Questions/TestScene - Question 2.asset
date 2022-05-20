@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450f59b43e3a7034198e66ece1c0a90d, type: 3}
+  m_Name: TestScene - Question 2
+  m_EditorClassIdentifier: 
+  questionString: Here is a second question. Will you get this one wrong?
+  answers:
+  - {fileID: 11400000, guid: 7ddf0cdf6c3770d4c82daf56cacbd0a5, type: 2}
+  - {fileID: 11400000, guid: 0d3d2a1f75302f24f9ff1aabca0f1900, type: 2}
+  - {fileID: 11400000, guid: c4e9c9d355df01e44b0e62be0b0329c2, type: 2}
+  - {fileID: 11400000, guid: 35b47b807ab966443b8d0e9491da3fb6, type: 2}
