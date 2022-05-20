@@ -1,6 +1,7 @@
 using UnityEngine;
 using Cinemachine;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 namespace CamSystem
 {
@@ -28,7 +29,11 @@ namespace CamSystem
         [Tooltip("Outline mode")] 
         public Outline.Mode outlineMode = Outline.Mode.OutlineAll;
         
-
+        [Header("Events")]
+        [Tooltip("This event triggers when the camera blend is finished")]
+        public UnityEvent onCameraTransitionEnded;
+        
+        [HideInInspector]
         public bool isActive;
 
         //private vars
@@ -36,6 +41,7 @@ namespace CamSystem
         private CameraAnchorManager _anchorManager;
         private Outline _outline;
         private CameraPanner _panner;
+        private CinemachineBrain _brain;
 
         //Event Functions
         void Start()
@@ -46,6 +52,8 @@ namespace CamSystem
         private void OnMouseUp()
         {
             ToggleVCam();
+            InvokeEvents();
+            _anchorManager.SetCurrentAnchor(this);
         }
 
         private void OnMouseEnter()
@@ -67,8 +75,9 @@ namespace CamSystem
             _vCam = GetComponent<CinemachineVirtualCamera>();
             _anchorManager = GetComponentInParent<CameraAnchorManager>();
             _panner = GetComponent<CameraPanner>();
-            _outline = null;
-            
+            _outline = null; 
+            _brain = CinemachineCore.Instance.FindPotentialTargetBrain(_vCam);
+
             //adds an outline to the first childObject
             if (transform.childCount >= 1)
             {
@@ -82,7 +91,7 @@ namespace CamSystem
             _panner.enabled = false;
         }
 
-        private void ToggleVCam()
+        public void ToggleVCam()
         {
             _anchorManager.DisableAllAnchors();
             _vCam.enabled = !_vCam.enabled;
@@ -98,6 +107,16 @@ namespace CamSystem
         private void SetOutlineWidth(float width)
         {
             _outline.OutlineWidth = width;
+        }
+
+        private void InvokeEvents()
+        {
+            Invoke(nameof(DelayedInvoke), _brain.m_DefaultBlend.m_Time);
+        }
+        
+        private void DelayedInvoke()
+        {
+            onCameraTransitionEnded.Invoke();
         }
     }
 }
