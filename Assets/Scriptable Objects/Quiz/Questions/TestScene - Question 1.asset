@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e2bf1144169a2047b130573e6ca0d57, type: 3}
+  m_Script: {fileID: 11500000, guid: 450f59b43e3a7034198e66ece1c0a90d, type: 3}
   m_Name: TestScene - Question 1
   m_EditorClassIdentifier: 
-  questionString: Ben jij slim?
+  questionString: This is a question, do you know how to answer?
   answers:
-  - {fileID: 11400000, guid: c75f2e7d5d07a0b4eb9439fc12d9844d, type: 2}
-  - {fileID: 11400000, guid: 06cd5a995b4e1aa47a011f96aef69d07, type: 2}
-  - {fileID: 11400000, guid: dd26b5e8b8bc65b46a615a89b821874a, type: 2}
-  - {fileID: 11400000, guid: 1807919c89d13384c97490f39dfe6f12, type: 2}
+  - {fileID: 11400000, guid: 50fb680fa68ec68429e513d4377d8b13, type: 2}
+  - {fileID: 11400000, guid: 046de7cede432e64c949cec6925589d3, type: 2}
+  - {fileID: 11400000, guid: 67ee95b9bc29b59419c132de354efd2a, type: 2}
+  - {fileID: 11400000, guid: 060bdaf2dd3d66348b87daa7602ee1f4, type: 2}
