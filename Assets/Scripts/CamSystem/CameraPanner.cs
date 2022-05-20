@@ -32,5 +32,10 @@ namespace CamSystem
             Vector3 mousePos = Input.mousePosition;
             return new Vector2(-mousePos.y / _cam.pixelHeight, mousePos.x / _cam.pixelWidth ) * mouseCursorMultiplier;
         }
+
+        public void ResetRotation()
+        {
+            transform.localRotation = Quaternion.Euler(_originalRotation);
+        }
     }
 }
