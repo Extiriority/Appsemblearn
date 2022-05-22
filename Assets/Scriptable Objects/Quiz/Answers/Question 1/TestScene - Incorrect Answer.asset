@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ca9ee4445b0d6449e7d74fa18f7203, type: 3}
   m_Name: TestScene - Incorrect Answer
   m_EditorClassIdentifier: 
-  answerString: Bing Bong
-  isCorrect: 0
+  answerString: TEST
+  isCorrect: 1

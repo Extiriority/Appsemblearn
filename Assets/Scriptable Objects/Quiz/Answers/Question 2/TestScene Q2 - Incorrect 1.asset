@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TestScene Q2 - Incorrect 1
   m_EditorClassIdentifier: 
   answerString: Test 3
-  isCorrect: 0
+  isCorrect: 1

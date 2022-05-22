@@ -17,12 +17,24 @@ public class QuestionManager : MonoBehaviour
     //Queue that is used to move through the questions in chronological order.
     [SerializeField] Queue<Question> questionQueue;
 
+    public List<Button> answerButtons;
+
     private void Start()
     {
         Queue<Question> _questionQueue = new Queue<Question>(questionList);
         questionQueue = _questionQueue;
 
         BindingDataToUI();
+    }
+
+    private void Update()
+    {
+        foreach (Button btn in answerButtons)
+        {
+            Answer ans = btn.GetComponent<ButtonAnswer>().answer;
+
+            btn.onClick.AddListener(delegate { CheckAnswer(ans); });
+        }
     }
 
     /// <summary>
@@ -40,6 +52,11 @@ public class QuestionManager : MonoBehaviour
         {
             TextMeshProUGUI uiAnswer = GameObject.FindGameObjectWithTag("answer" + i).GetComponent<TextMeshProUGUI>();
 
+            Button button = GameObject.FindGameObjectWithTag("button" + i).GetComponent<Button>();
+            answerButtons.Add(button);
+            Debug.Log(answer + "This should be Q2");
+            button.GetComponent<ButtonAnswer>().answer = answer;
+
             uiAnswer.text = answer.answerString;
             i++;
         }
@@ -50,6 +67,7 @@ public class QuestionManager : MonoBehaviour
     /// </summary>
     public void CheckAnswer(Answer answer)
     {
+        Debug.Log(answer);
         if (answer.isCorrect == true)
         {
             CorrectAnswer(answer);
@@ -65,14 +83,14 @@ public class QuestionManager : MonoBehaviour
     private void IncorrectAnswer(Answer answer)
     {
         // Correct answer message
-
+        Debug.Log("Incorrect");
         //Based on the answer define next learning steps here.
     }
 
     private void CorrectAnswer(Answer answer)
     {
         // Correct answer message
-
+        Debug.Log("Correct");
 
     }
 
@@ -86,7 +104,6 @@ public class QuestionManager : MonoBehaviour
         {
             if (questionList.Count != 0) {
                 var next = questionQueue.Peek();
-                Debug.Log(next);
                 if (question != next)
                 {
                     question = next;
