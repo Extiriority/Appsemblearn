@@ -10,7 +10,7 @@ public class TypeWriterEffect : MonoBehaviour
 
     public bool isRunning { get; private set; }
     
-    private readonly Dictionary<HashSet<char>, float> punctuations = new Dictionary<HashSet<char>, float>() {
+    private readonly Dictionary<HashSet<char>, float> punctuations = new() {
         { new HashSet<char>() { '.', '!', '?' }, 0.6f },
         { new HashSet<char>() { ',', ';', ':' }, 0.3f }
     };
@@ -42,6 +42,12 @@ public class TypeWriterEffect : MonoBehaviour
                 textLabel.text = textToType.Substring(0, i + 1);
                 if (isPunctuation(textToType[i], out float waitTime) && !isLast && !isPunctuation(textToType[i + 1], out _)) {
                     yield return new WaitForSeconds(waitTime);
+                }
+                if (!textToType[i].Equals(' ') && !textToType[i].Equals(',') && !textToType[i].Equals('.') && !textToType[i].Equals('!') && !textToType[i].Equals('?')) {
+                    SoundManager.instance.play("sans");
+                }
+                if (textToType[i].Equals('.')) {
+                    SoundManager.instance.play("punctuation");
                 }
             }
             yield return null;
