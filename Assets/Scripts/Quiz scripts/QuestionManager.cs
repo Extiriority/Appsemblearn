@@ -17,7 +17,7 @@ public class QuestionManager : MonoBehaviour
     //Queue that is used to move through the questions in chronological order.
     [SerializeField] Queue<Question> questionQueue;
 
-    public List<Button> answerButtons;
+    [SerializeField] List<Button> answerButtons;
 
     private void Start()
     {
@@ -25,17 +25,9 @@ public class QuestionManager : MonoBehaviour
         questionQueue = _questionQueue;
 
         BindingDataToUI();
+        UpdateButtons();
     }
 
-    private void Update()
-    {
-        foreach (Button btn in answerButtons)
-        {
-            Answer ans = btn.GetComponent<ButtonAnswer>().answer;
-
-            btn.onClick.AddListener(delegate { CheckAnswer(ans); });
-        }
-    }
 
     /// <summary>
     /// This method sets the data for the ui elements. It fills in the textmeshes based on the scriptable objects.
@@ -47,14 +39,15 @@ public class QuestionManager : MonoBehaviour
 
         //Index to fill in numbered answer buttons.
         int i = 1;
+        answerButtons.Clear();
 
         foreach (Answer answer in question.answers)
         {
             TextMeshProUGUI uiAnswer = GameObject.FindGameObjectWithTag("answer" + i).GetComponent<TextMeshProUGUI>();
 
             Button button = GameObject.FindGameObjectWithTag("button" + i).GetComponent<Button>();
+            
             answerButtons.Add(button);
-            Debug.Log(answer + "This should be Q2");
             button.GetComponent<ButtonAnswer>().answer = answer;
 
             uiAnswer.text = answer.answerString;
@@ -67,7 +60,6 @@ public class QuestionManager : MonoBehaviour
     /// </summary>
     public void CheckAnswer(Answer answer)
     {
-        Debug.Log(answer);
         if (answer.isCorrect == true)
         {
             CorrectAnswer(answer);
@@ -83,14 +75,14 @@ public class QuestionManager : MonoBehaviour
     private void IncorrectAnswer(Answer answer)
     {
         // Correct answer message
-        Debug.Log("Incorrect");
+        //Debug.Log("Incorrect");
         //Based on the answer define next learning steps here.
     }
 
     private void CorrectAnswer(Answer answer)
     {
         // Correct answer message
-        Debug.Log("Correct");
+        //Debug.Log("Correct");
 
     }
 
@@ -99,7 +91,8 @@ public class QuestionManager : MonoBehaviour
     /// Sends the user to the next question in the queue.
     /// </summary>
     private void NextQuestion()
-    {     
+    {
+        questionQueue.Dequeue();
         for (int i = 0; i < questionList.Count; i++)
         {
             if (questionList.Count != 0) {
@@ -108,10 +101,19 @@ public class QuestionManager : MonoBehaviour
                 {
                     question = next;
                     BindingDataToUI();
+                    UpdateButtons();
                 }
-            }
+            } 
+        }
+    }
 
-            questionQueue.Dequeue();
+    private void UpdateButtons()
+    {
+        foreach (Button btn in answerButtons)
+        {
+            Answer ans = btn.GetComponent<ButtonAnswer>().answer;
+
+            btn.onClick.AddListener(delegate { CheckAnswer(ans); Debug.Log(ans); });
         }
     }
 }
