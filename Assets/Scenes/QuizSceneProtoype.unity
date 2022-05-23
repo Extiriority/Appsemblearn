@@ -172,6 +172,7 @@ MonoBehaviour:
   questionList:
   - {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
   - {fileID: 11400000, guid: 5d5c1faba854f714ebb96309d5f25bdf, type: 2}
+  - {fileID: 11400000, guid: 370e93635a4468b45a434b898820a3c7, type: 2}
   answerButtons: []
 --- !u!1 &193053097
 GameObject:
@@ -656,7 +657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1387.3029, y: 47.00183}
+  m_AnchoredPosition: {x: 1081, y: 47.00183}
   m_SizeDelta: {x: 305.6663, y: 101.8964}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063519355
@@ -1657,7 +1658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -838.34863, y: 47.00183}
+  m_AnchoredPosition: {x: -533, y: 47.00183}
   m_SizeDelta: {x: 305.644, y: 101.8964}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022699575

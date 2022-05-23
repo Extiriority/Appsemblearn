@@ -46,7 +46,7 @@ public class QuestionManager : MonoBehaviour
             TextMeshProUGUI uiAnswer = GameObject.FindGameObjectWithTag("answer" + i).GetComponent<TextMeshProUGUI>();
 
             Button button = GameObject.FindGameObjectWithTag("button" + i).GetComponent<Button>();
-            
+
             answerButtons.Add(button);
             button.GetComponent<ButtonAnswer>().answer = answer;
 
@@ -75,14 +75,14 @@ public class QuestionManager : MonoBehaviour
     private void IncorrectAnswer(Answer answer)
     {
         // Correct answer message
-        //Debug.Log("Incorrect");
+        Debug.Log("Incorrect");
         //Based on the answer define next learning steps here.
     }
 
     private void CorrectAnswer(Answer answer)
     {
         // Correct answer message
-        //Debug.Log("Correct");
+        Debug.Log("Correct");
 
     }
 
@@ -112,8 +112,7 @@ public class QuestionManager : MonoBehaviour
         foreach (Button btn in answerButtons)
         {
             Answer ans = btn.GetComponent<ButtonAnswer>().answer;
-
-            btn.onClick.AddListener(delegate { CheckAnswer(ans); Debug.Log(ans); });
+            btn.onClick.AddListener(delegate { CheckAnswer(ans);});
         }
     }
 }
