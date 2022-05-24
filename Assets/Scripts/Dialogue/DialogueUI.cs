@@ -6,7 +6,6 @@ public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
-    //[SerializeField] private DialogueObject testDialogue;
     
     public bool isOpen { get; private set; }
     
@@ -14,7 +13,6 @@ public class DialogueUI : MonoBehaviour
     private void Start() {
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         closeDialogueBox();
-        //showDialogue(testDialogue);
     }
  
     public void showDialogue(DialogueObject dialogueObject) {

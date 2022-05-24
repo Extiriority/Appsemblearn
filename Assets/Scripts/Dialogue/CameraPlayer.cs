@@ -12,14 +12,8 @@ public class CameraPlayer : MonoBehaviour
 
     public IInteractable interactable { get; set; }
 
-    private void Update()
-    {
+    private void Update() {
         if (DialogueUI.isOpen) return;
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log(Input.GetKeyDown(KeyCode.E));
-            Debug.Log(interactable);
-            interactable?.Interact(this);
-        }
+        interactable?.Interact(this);
     }
 }
