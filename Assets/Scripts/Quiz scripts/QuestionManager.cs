@@ -10,6 +10,9 @@ public class QuestionManager : MonoBehaviour
     //Current question and answers.
     [Header("First question")]
     [SerializeField] Question question;
+    
+    [Header("Current question")]
+    [SerializeField] Question currectQuestion;
 
     [Header("All questions in this scene")]
     [SerializeField] List<Question> questionList;
@@ -21,6 +24,7 @@ public class QuestionManager : MonoBehaviour
 
     private void Start()
     {
+        currectQuestion = question;
         Queue<Question> _questionQueue = new Queue<Question>(questionList);
         questionQueue = _questionQueue;
 
@@ -32,16 +36,13 @@ public class QuestionManager : MonoBehaviour
     /// <summary>
     /// This method sets the data for the ui elements. It fills in the textmeshes based on the scriptable objects.
     /// </summary>
-    private void BindingDataToUI()
+    public void BindingDataToUI()
     {
-        TextMeshProUGUI uiQuestion = GameObject.FindGameObjectWithTag("question").GetComponent<TextMeshProUGUI>();
-        uiQuestion.text = question.questionString;
-
         //Index to fill in numbered answer buttons.
         int i = 1;
         answerButtons.Clear();
 
-        foreach (Answer answer in question.answers)
+        foreach (Answer answer in currectQuestion.answers)
         {
             TextMeshProUGUI uiAnswer = GameObject.FindGameObjectWithTag("answer" + i).GetComponent<TextMeshProUGUI>();
 
@@ -71,8 +72,8 @@ public class QuestionManager : MonoBehaviour
             NextQuestion();
         }
     }
-
-    private void IncorrectAnswer(Answer answer)
+    
+        private void IncorrectAnswer(Answer answer)
     {
         // Correct answer message
         Debug.Log("Incorrect");
@@ -83,23 +84,21 @@ public class QuestionManager : MonoBehaviour
     {
         // Correct answer message
         Debug.Log("Correct");
-
     }
-
-
+    
     /// <summary>
     /// Sends the user to the next question in the queue.
     /// </summary>
-    private void NextQuestion()
+    public void NextQuestion()
     {
         questionQueue.Dequeue();
         for (int i = 0; i < questionList.Count; i++)
         {
             if (questionList.Count != 0) {
                 var next = questionQueue.Peek();
-                if (question != next)
+                if (currectQuestion != next)
                 {
-                    question = next;
+                    currectQuestion = next;
                     BindingDataToUI();
                     UpdateButtons();
                 }
@@ -114,5 +113,12 @@ public class QuestionManager : MonoBehaviour
             Answer ans = btn.GetComponent<ButtonAnswer>().answer;
             btn.onClick.AddListener(delegate { CheckAnswer(ans);});
         }
+    }
+
+    public void SyncUI()
+    {
+        GetComponentInChildren<DialogueUI>().dialogueObject.question = currectQuestion;
+        TextMeshProUGUI uiQuestion = GameObject.FindGameObjectWithTag("question").GetComponent<TextMeshProUGUI>();
+        uiQuestion.text = GetComponentInChildren<DialogueUI>().dialogueObject.question.questionString;
     }
 }

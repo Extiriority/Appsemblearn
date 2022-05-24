@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450f59b43e3a7034198e66ece1c0a90d, type: 3}
   m_Name: TESTJE
   m_EditorClassIdentifier: 
-  questionString: '''HOI'
+  questionString: TESTQUESTION
   answers:
   - {fileID: 11400000, guid: f8a01fbd7a798cf478d07bc23bcb5ac4, type: 2}
   - {fileID: 11400000, guid: 498417f599d0b5c44bc321326c2086f8, type: 2}
