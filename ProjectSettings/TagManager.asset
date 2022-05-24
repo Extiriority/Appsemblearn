@@ -9,6 +9,7 @@ TagManager:
   - answer2
   - answer3
   - answer4
+  - Camera
   layers:
   - Default
   - TransparentFX
