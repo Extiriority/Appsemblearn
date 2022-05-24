@@ -5,6 +5,7 @@ using TMPro;
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private TMP_Text textLabel;
     
     public bool isOpen { get; private set; }
@@ -13,6 +14,7 @@ public class DialogueUI : MonoBehaviour
     private void Start() {
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         closeDialogueBox();
+        showDialogue(dialogueObject);
     }
  
     public void showDialogue(DialogueObject dialogueObject) {
