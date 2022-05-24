@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450f59b43e3a7034198e66ece1c0a90d, type: 3}
   m_Name: TestScene - Question 2
   m_EditorClassIdentifier: 
-  questionString: Here is a second question. Will you get this one wrong?
+  questionString: t this one wrong?question. Will you get this one wrong?
   answers:
   - {fileID: 11400000, guid: 7ddf0cdf6c3770d4c82daf56cacbd0a5, type: 2}
   - {fileID: 11400000, guid: 0d3d2a1f75302f24f9ff1aabca0f1900, type: 2}

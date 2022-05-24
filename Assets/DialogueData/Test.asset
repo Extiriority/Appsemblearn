@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   dialogue:
-  - I dont know what you like, but I think I am in love with you. Even thought you
-    are ugly!
-  - 'All in all, thats true love, right? Oh well just let this relationship flow
-    I guess!
+  - Hellooo! Welcome to Blok Island, the island to learn any digital skills.
+  - Before we start, we will hop into tutorial island to find the ropes of this system.
+  - 'oh no, I forgot my line. . .
 
-'
+    JUST COME WITH ME!'
+  - The next part is the actual blok island, a fancy four district place that you
+    can unlock.
+  - Adventure awaits! so don't hold now and learn new skills!
