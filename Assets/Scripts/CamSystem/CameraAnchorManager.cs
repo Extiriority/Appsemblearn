@@ -11,16 +11,18 @@ namespace CamSystem
         private List<CinemachineVirtualCamera> _cameraAnchors;
         private List<CameraPanner> _cameraPanners;
         public List<CameraAnchor> anchorPath;
+        [SerializeField] KeyCode backButton;
         void Start()
         {
             _cameraAnchors = GetComponentsInChildren<CinemachineVirtualCamera>().ToList();
             _cameraPanners = GetComponentsInChildren<CameraPanner>().ToList();
             DisableAllAnchors();
+            ActivateAnchor(0);
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Backspace))
+            if (Input.GetKeyDown(backButton))
             {
                 ActivatePreviousAnchor();
             }
@@ -53,6 +55,13 @@ namespace CamSystem
                 anchorPath.RemoveAt(anchorPath.Count-1);
                 anchorPath[^1].ToggleVCam();
             }
+        }
+
+        private void ActivateAnchor(int anchorIndex)
+        {
+            DisableAllAnchors();
+            _cameraAnchors[anchorIndex].enabled = true;
+            _cameraPanners[anchorIndex].enabled = true;
         }
     }
 }
