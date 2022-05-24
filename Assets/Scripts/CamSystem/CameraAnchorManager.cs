@@ -11,6 +11,7 @@ namespace CamSystem
         private List<CinemachineVirtualCamera> _cameraAnchors;
         private List<CameraPanner> _cameraPanners;
         public List<CameraAnchor> anchorPath;
+        [SerializeField] KeyCode backButton;
         void Start()
         {
             _cameraAnchors = GetComponentsInChildren<CinemachineVirtualCamera>().ToList();
@@ -21,7 +22,7 @@ namespace CamSystem
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Backspace))
+            if (Input.GetKeyDown(backButton))
             {
                 ActivatePreviousAnchor();
             }
