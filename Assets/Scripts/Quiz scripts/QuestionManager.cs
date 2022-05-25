@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class QuestionManager : MonoBehaviour
 {
@@ -71,9 +69,9 @@ public class QuestionManager : MonoBehaviour
             IncorrectAnswer(answer);
             NextQuestion();
         }
-    }
+    } 
     
-        private void IncorrectAnswer(Answer answer)
+    private void IncorrectAnswer(Answer answer)
     {
         // Correct answer message
         Debug.Log("Incorrect");
