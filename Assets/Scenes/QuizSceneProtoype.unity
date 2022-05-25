@@ -320,6 +320,8 @@ GameObject:
   m_Component:
   - component: {fileID: 196810426}
   - component: {fileID: 196810427}
+  - component: {fileID: 196810428}
+  - component: {fileID: 196810429}
   m_Layer: 0
   m_Name: AnswerButtons
   m_TagString: Untagged
@@ -335,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196810425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 162.64282, y: -264.99286, z: 1.0136108}
+  m_LocalPosition: {x: 162.6428, y: -148, z: 1.013611}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -355,7 +357,7 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196810425}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
   m_InitialState: 0
@@ -364,7 +366,7 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 1097807512412988973, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 375858953}
+    value: {fileID: 0}
   - key: {fileID: 3963524883478159611, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
     value: {fileID: 1449775174}
   - key: {fileID: -2481142446784280768, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
@@ -374,11 +376,57 @@ PlayableDirector:
   - key: {fileID: 1507723216313675977, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
     value: {fileID: 2022699578}
   - key: {fileID: 190769677058047435, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 375858953}
+    value: {fileID: 0}
   - key: {fileID: -6841171370515827718, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
     value: {fileID: 1206995248}
+  - key: {fileID: -6841171370515827718, guid: 16773736a1d4dc44ca5c9b3894febfcb, type: 2}
+    value: {fileID: 1206995248}
+  - key: {fileID: 1097807512412988973, guid: 16773736a1d4dc44ca5c9b3894febfcb, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 190769677058047435, guid: 16773736a1d4dc44ca5c9b3894febfcb, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3963524883478159611, guid: 16773736a1d4dc44ca5c9b3894febfcb, type: 2}
+    value: {fileID: 1449775174}
+  - key: {fileID: -2481142446784280768, guid: 16773736a1d4dc44ca5c9b3894febfcb, type: 2}
+    value: {fileID: 1799744914}
+  - key: {fileID: 6207435568575042220, guid: 16773736a1d4dc44ca5c9b3894febfcb, type: 2}
+    value: {fileID: 1063519358}
+  - key: {fileID: 1507723216313675977, guid: 16773736a1d4dc44ca5c9b3894febfcb, type: 2}
+    value: {fileID: 2022699578}
   m_ExposedReferences:
     m_References: []
+--- !u!95 &196810428
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196810425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4785a98153c6c846a32f560f2b26271, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &196810429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196810425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b882e46732388f145abd0e9469596113, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &211326134
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +564,6 @@ GameObject:
   - component: {fileID: 375858949}
   - component: {fileID: 375858948}
   - component: {fileID: 375858952}
-  - component: {fileID: 375858953}
   m_Layer: 0
   m_Name: Up
   m_TagString: Untagged
@@ -531,7 +578,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375858944}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1.0136108}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
@@ -541,7 +588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -152.04297, y: -234.33002}
+  m_AnchoredPosition: {x: -185.64294, y: -239}
   m_SizeDelta: {x: 216, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375858948
@@ -588,9 +635,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 196810427}
-        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 196810429}
+        m_TargetAssemblyTypeName: SlideUpAnimation, Assembly-CSharp
+        m_MethodName: CheckState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -651,26 +698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueObject: {fileID: 11400000, guid: 268c030e6a937ff48a6e8c0786c9b411, type: 2}
---- !u!95 &375858953
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375858944}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &399739872
 GameObject:
   m_ObjectHideFlags: 0
