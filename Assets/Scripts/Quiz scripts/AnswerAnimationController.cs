@@ -26,12 +26,14 @@ public class AnswerAnimationController : MonoBehaviour
 
     public void ShowAnswers()
     {
+        Debug.Log("OK");
         isUp = true;
         animator.SetTrigger("GoUp");
     }
 
     public void HideAnswers()
     {
+        Debug.Log("NO");
         isUp = false;
         animator.SetTrigger("GoDown");
     }

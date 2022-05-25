@@ -319,7 +319,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 196810426}
-  - component: {fileID: 196810427}
   - component: {fileID: 196810429}
   - component: {fileID: 196810428}
   m_Layer: 0
@@ -350,37 +349,6 @@ Transform:
   m_Father: {fileID: 1398857645}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &196810427
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196810425}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 1097807512412988973, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 375858953}
-  - key: {fileID: 3963524883478159611, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 1449775174}
-  - key: {fileID: -2481142446784280768, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 1799744914}
-  - key: {fileID: 6207435568575042220, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 1063519358}
-  - key: {fileID: 1507723216313675977, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 2022699578}
-  - key: {fileID: 190769677058047435, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 375858953}
-  - key: {fileID: -6841171370515827718, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
-    value: {fileID: 1206995248}
-  m_ExposedReferences:
-    m_References: []
 --- !u!114 &196810428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -590,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -990,7 +958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1626,7 +1594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2171,7 +2139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}

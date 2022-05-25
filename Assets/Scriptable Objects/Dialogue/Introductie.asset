@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - Hallo en welkom!
-  - "Bij BLOKEILAND! \U0001F602\U0001F602\U0001F602\U0001F602\U0001F602\U0001F602\U0001F602\U0001F602\U0001F602\U0001F602Hier
-    begin je je avontuur tot software expert."
+  - Bij BlokEiland, de plek waar jij omgetoverd wordt tot software expert!
   questions:
   - {fileID: 11400000, guid: 8cf422fbaf38738449d4160c9f462ca1, type: 2}
-  question: {fileID: 11400000, guid: 8cf422fbaf38738449d4160c9f462ca1, type: 2}
+  question: {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
