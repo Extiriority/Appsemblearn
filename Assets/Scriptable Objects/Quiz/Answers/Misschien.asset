@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ca9ee4445b0d6449e7d74fa18f7203, type: 3}
-  m_Name: Test2
+  m_Name: Misschien
   m_EditorClassIdentifier: 
-  answerString: ewq
+  answerString: Misschien
   isCorrect: 0
+  dialogueObject: {fileID: 11400000, guid: c2e60be801713454899c7e1c04935222, type: 2}

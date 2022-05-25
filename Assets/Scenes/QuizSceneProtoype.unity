@@ -168,13 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e650937b8cb39e147a23582d729b48f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
+  question: {fileID: 11400000, guid: 8cf422fbaf38738449d4160c9f462ca1, type: 2}
   currectQuestion: {fileID: 0}
   questionList:
-  - {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
-  - {fileID: 11400000, guid: 370e93635a4468b45a434b898820a3c7, type: 2}
-  - {fileID: 11400000, guid: 5d5c1faba854f714ebb96309d5f25bdf, type: 2}
-  - {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
+  - {fileID: 11400000, guid: 8cf422fbaf38738449d4160c9f462ca1, type: 2}
   answerButtons: []
   answerHandler: {fileID: 0}
 --- !u!1 &193053097
@@ -554,11 +551,11 @@ GameObject:
   - component: {fileID: 375858953}
   m_Layer: 0
   m_Name: Up
-  m_TagString: Untagged
+  m_TagString: UpDownButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &375858945
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1528,10 +1525,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1206995245}
-  dialogueObject: {fileID: 11400000, guid: 47f810946ec82054e8c83094c083aa69, type: 2}
+  dialogueObject: {fileID: 11400000, guid: 5efd6e7ab15b13a49afdf36b5f4c2772, type: 2}
   textLabel: {fileID: 1206995244}
   answerHandler: {fileID: 1398857651}
-  playableDirector: {fileID: 196810427}
+  answerAnimationController: {fileID: 196810428}
+  up: {fileID: 375858944}
   onDialogueEnded:
     m_PersistentCalls:
       m_Calls:

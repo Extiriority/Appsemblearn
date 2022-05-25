@@ -51,7 +51,10 @@ public class AnswerHandler : MonoBehaviour
     public void OnAnswerPicked(Answer answer)
     {
         //Call animation down
-        conversationManager.NextQuestion();
+        dialogueUI.answerAnimationController.HideAnswers();
+        dialogueUI.up.SetActive(false);
+        
+        //conversationManager.NextQuestion();
 
         BindingDataToUI();
         UpdateButtons();

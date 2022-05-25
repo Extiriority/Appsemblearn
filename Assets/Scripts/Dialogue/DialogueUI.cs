@@ -15,8 +15,10 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] public DialogueObject dialogueObject;
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] private AnswerHandler answerHandler;
-    [SerializeField] public PlayableDirector playableDirector;
-    
+    [SerializeField] public AnswerAnimationController answerAnimationController;
+    [SerializeField] public GameObject up;
+
+
     public UnityEvent onDialogueEnded;
     
     public bool isOpen { get; private set; }
@@ -44,30 +46,34 @@ public class DialogueUI : MonoBehaviour
         {
             string dialogue = dialogueObject.Dialogue[i];
             textLabel.text = dialogue;
-
             yield return runTypingEffect(dialogue);
-
             if (i == dialogueObject.Dialogue.Length && dialogueObject.HasAnswers)
             {
                 break;
-            }    
-
-            yield return null;
+            }
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
 
         if (dialogueObject.HasAnswers)
         {
-            playableDirector.Play();
+            up.SetActive(true);
+
+            answerAnimationController.ShowAnswers();
             answerHandler.UpdateButtons();
+        }
+        else
+        {
+            closeDialogueBox();
         }
 
         onDialogueEnded.Invoke();
     }
 
-    private IEnumerator runTypingEffect(string dialogue) {
+    private IEnumerator runTypingEffect(string dialogue) 
+    {
         typeWriterEffect.run(dialogue, textLabel);
-        while (typeWriterEffect.isRunning) {
+        while (typeWriterEffect.isRunning) 
+        {
             yield return null;
             if (Input.GetKeyDown(KeyCode.Space)) {
                 typeWriterEffect.Stop();
