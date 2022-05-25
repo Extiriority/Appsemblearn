@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using Unity.VisualScripting;
@@ -5,8 +8,6 @@ using UnityEngine.Events;
 
 namespace CamSystem
 {
-    [RequireComponent(typeof(CinemachineVirtualCamera))]
-    [RequireComponent(typeof(CameraPanner))]
     public class CameraAnchor : MonoBehaviour
     {
         //Public vars
@@ -72,16 +73,16 @@ namespace CamSystem
         //Helper Functions
         private void LoadComponents()
         {
-            _vCam = GetComponent<CinemachineVirtualCamera>();
+            _vCam = GetComponentInChildren<CinemachineVirtualCamera>();
             _anchorManager = GetComponentInParent<CameraAnchorManager>();
-            _panner = GetComponent<CameraPanner>();
+            _panner = GetComponentInChildren<CameraPanner>();
             _outline = null; 
             _brain = CinemachineCore.Instance.FindPotentialTargetBrain(_vCam);
 
             //adds an outline to the first childObject
             if (transform.childCount >= 1)
             {
-                _outline = transform.GetChild(0).AddComponent<Outline>();
+                _outline = transform.GetComponentInChildren<MeshRenderer>().gameObject.AddComponent<Outline>();
                 _outline.OutlineColor = defaultOutlineColor;
                 _outline.OutlineWidth = defaultOutlineWidth;
                 _outline.OutlineMode = outlineMode;
@@ -91,12 +92,9 @@ namespace CamSystem
             _panner.enabled = false;
         }
 
-        public void ToggleVCam()
+        public void ToggleVCam(float delay = 0f)
         {
-            _anchorManager.DisableAllAnchors();
-            _vCam.enabled = !_vCam.enabled;
-            _panner.enabled = _vCam.enabled;
-            isActive = !isActive;
+            StartCoroutine(ToggleVCamDelayed(delay));
         }
 
         private void SetOutlineColor(Color color)
@@ -117,6 +115,21 @@ namespace CamSystem
         private void DelayedInvoke()
         {
             onCameraTransitionEnded.Invoke();
+        }
+
+        public void DisableAnchor()
+        {
+            _panner.ResetRotation();
+            _vCam.enabled = false;
+        }
+
+        IEnumerator ToggleVCamDelayed(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            _anchorManager.DisableAllAnchors();
+            _vCam.enabled = !_vCam.enabled;
+            _panner.enabled = _vCam.enabled;
+            isActive = !isActive;
         }
     }
 }
