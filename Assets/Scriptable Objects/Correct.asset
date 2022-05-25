@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ca9ee4445b0d6449e7d74fa18f7203, type: 3}
-  m_Name: TestScene - Correct answer 1
+  m_Script: {fileID: 11500000, guid: ee061833eaebaa5478db1c893f29c31e, type: 3}
+  m_Name: Correct
   m_EditorClassIdentifier: 
-  answerString: Yes!
-  isCorrect: 1
-  dialogueObject: {fileID: 11400000, guid: 49736930c69f1ce4ab650c21148c709b, type: 2}
+  dialogue:
+  - YOU GOT IT RIGHT!!!
+  questions: []
+  question: {fileID: 0}

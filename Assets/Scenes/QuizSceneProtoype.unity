@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1139821}
   - component: {fileID: 1139822}
   m_Layer: 0
-  m_Name: QuizManager
+  m_Name: Conversation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,9 +172,11 @@ MonoBehaviour:
   currectQuestion: {fileID: 0}
   questionList:
   - {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
-  - {fileID: 11400000, guid: 5d5c1faba854f714ebb96309d5f25bdf, type: 2}
   - {fileID: 11400000, guid: 370e93635a4468b45a434b898820a3c7, type: 2}
+  - {fileID: 11400000, guid: 5d5c1faba854f714ebb96309d5f25bdf, type: 2}
+  - {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
   answerButtons: []
+  answerHandler: {fileID: 0}
 --- !u!1 &193053097
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +517,6 @@ GameObject:
   - component: {fileID: 375858950}
   - component: {fileID: 375858949}
   - component: {fileID: 375858948}
-  - component: {fileID: 375858952}
   - component: {fileID: 375858953}
   m_Layer: 0
   m_Name: Up
@@ -541,7 +542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -152.04297, y: -234.33002}
+  m_AnchoredPosition: {x: -185.64294, y: -234.33002}
   m_SizeDelta: {x: 216, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375858948
@@ -638,19 +639,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375858944}
   m_CullTransparentMesh: 1
---- !u!114 &375858952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375858944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c628b41bcec27478390a20be5e721a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: 268c030e6a937ff48a6e8c0786c9b411, type: 2}
 --- !u!95 &375858953
 Animator:
   serializedVersion: 4
@@ -1390,6 +1378,7 @@ GameObject:
   - component: {fileID: 1398857646}
   - component: {fileID: 1398857650}
   - component: {fileID: 1398857649}
+  - component: {fileID: 1398857651}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1507,6 +1496,8 @@ MonoBehaviour:
   dialogueBox: {fileID: 1206995245}
   dialogueObject: {fileID: 11400000, guid: 47f810946ec82054e8c83094c083aa69, type: 2}
   textLabel: {fileID: 1206995244}
+  answerHandler: {fileID: 1398857651}
+  playableDirector: {fileID: 196810427}
   onDialogueEnded:
     m_PersistentCalls:
       m_Calls:
@@ -1522,6 +1513,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1398857651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398857644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f802f04a2812f245b417562815e62cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1402104516
 MonoBehaviour:
   m_ObjectHideFlags: 0

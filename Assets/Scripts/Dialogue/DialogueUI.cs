@@ -7,39 +7,62 @@ using UnityEngine;
 using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine.Events;
+using UnityEngine.Playables;
 
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] public DialogueObject dialogueObject;
     [SerializeField] private TMP_Text textLabel;
+    [SerializeField] private AnswerHandler answerHandler;
+    [SerializeField] public PlayableDirector playableDirector;
     
     public UnityEvent onDialogueEnded;
     
     public bool isOpen { get; private set; }
     
     private TypeWriterEffect typeWriterEffect;
-    private void Start() {
+    private void Start() 
+    {
+        answerHandler = GetComponent<AnswerHandler>();
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         //closeDialogueBox();
         showDialogue(dialogueObject);
     }
  
-    public void showDialogue(DialogueObject dialogueObject) {
+    public void showDialogue(DialogueObject dialogueObject) 
+    {
         isOpen = true;
         dialogueBox.SetActive(true);
         StartCoroutine(stepThroughDialogue(dialogueObject));
     }
 
-    private IEnumerator stepThroughDialogue(DialogueObject dialogueObject) {
-        foreach (string dialogue in dialogueObject.Dialogue) {
-            yield return runTypingEffect(dialogue);
+    private IEnumerator stepThroughDialogue(DialogueObject dialogueObject) 
+    {
+
+        for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
+        {
+            string dialogue = dialogueObject.Dialogue[i];
             textLabel.text = dialogue;
+
+            yield return runTypingEffect(dialogue);
+
+            if (i == dialogueObject.Dialogue.Length && dialogueObject.HasAnswers)
+            {
+                break;
+            }    
+
             yield return null;
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
+
+        if (dialogueObject.HasAnswers)
+        {
+            playableDirector.Play();
+            answerHandler.UpdateButtons();
+        }
+
         onDialogueEnded.Invoke();
-        //closeDialogueBox();
     }
 
     private IEnumerator runTypingEffect(string dialogue) {
@@ -55,9 +78,7 @@ public class DialogueUI : MonoBehaviour
     private void closeDialogueBox() {
         isOpen = false;
         dialogueBox.SetActive(false);
-        textLabel.text = string.Empty;
-        
-       
+        textLabel.text = string.Empty;  
     }
 }
  

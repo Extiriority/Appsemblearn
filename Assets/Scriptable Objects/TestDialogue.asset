@@ -16,4 +16,8 @@ MonoBehaviour:
   - This is some test dialogue
   - Second dialogue
   - Last dialogue
+  questions:
+  - {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
+  - {fileID: 11400000, guid: 5d5c1faba854f714ebb96309d5f25bdf, type: 2}
+  - {fileID: 11400000, guid: 370e93635a4468b45a434b898820a3c7, type: 2}
   question: {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
