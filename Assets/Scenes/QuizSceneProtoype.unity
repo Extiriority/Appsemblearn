@@ -322,6 +322,8 @@ GameObject:
   m_Component:
   - component: {fileID: 196810426}
   - component: {fileID: 196810427}
+  - component: {fileID: 196810429}
+  - component: {fileID: 196810428}
   m_Layer: 0
   m_Name: AnswerButtons
   m_TagString: Untagged
@@ -357,7 +359,7 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196810425}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 1d4dc1d8a41ce0841922cdb89ed97e00, type: 2}
   m_InitialState: 0
@@ -381,6 +383,38 @@ PlayableDirector:
     value: {fileID: 1206995248}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &196810428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196810425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b882e46732388f145abd0e9469596113, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &196810429
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196810425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4785a98153c6c846a32f560f2b26271, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &211326134
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,9 +623,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 196810427}
-        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 196810428}
+        m_TargetAssemblyTypeName: AnswerAnimationController, Assembly-CSharp
+        m_MethodName: CheckState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

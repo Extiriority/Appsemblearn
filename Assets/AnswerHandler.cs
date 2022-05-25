@@ -11,7 +11,7 @@ public class AnswerHandler : MonoBehaviour
 
 
 
-    private void Start()
+    private void Awake()
     {
         conversationManager = GetComponentInParent<ConversationManager>();
         dialogueUI = GetComponent<DialogueUI>();
