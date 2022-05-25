@@ -172,6 +172,7 @@ MonoBehaviour:
   currectQuestion: {fileID: 0}
   questionList:
   - {fileID: 11400000, guid: 8cf422fbaf38738449d4160c9f462ca1, type: 2}
+  - {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
   answerButtons: []
   answerHandler: {fileID: 0}
 --- !u!1 &193053097

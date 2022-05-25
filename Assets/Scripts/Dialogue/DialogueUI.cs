@@ -24,11 +24,11 @@ public class DialogueUI : MonoBehaviour
     public bool isOpen { get; private set; }
     
     private TypeWriterEffect typeWriterEffect;
+
     private void Start() 
     {
         answerHandler = GetComponent<AnswerHandler>();
         typeWriterEffect = GetComponent<TypeWriterEffect>();
-        //closeDialogueBox();
         showDialogue(dialogueObject);
     }
  
@@ -41,16 +41,17 @@ public class DialogueUI : MonoBehaviour
 
     private IEnumerator stepThroughDialogue(DialogueObject dialogueObject) 
     {
-
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
             string dialogue = dialogueObject.Dialogue[i];
             textLabel.text = dialogue;
             yield return runTypingEffect(dialogue);
+
             if (i == dialogueObject.Dialogue.Length && dialogueObject.HasAnswers)
             {
                 break;
             }
+
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
 
@@ -60,10 +61,6 @@ public class DialogueUI : MonoBehaviour
 
             answerAnimationController.ShowAnswers();
             answerHandler.UpdateButtons();
-        }
-        else
-        {
-            closeDialogueBox();
         }
 
         onDialogueEnded.Invoke();

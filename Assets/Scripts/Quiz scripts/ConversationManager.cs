@@ -35,7 +35,7 @@ public class ConversationManager : MonoBehaviour
         answerHandler = GetComponentInChildren<AnswerHandler>();
 
         answerHandler.BindingDataToUI();
-        answerHandler.UpdateButtons();
+        //answerHandler.UpdateButtons();
     }
  
     /// <summary>
@@ -52,7 +52,7 @@ public class ConversationManager : MonoBehaviour
                 {
                     currectQuestion = next;
                     answerHandler.BindingDataToUI();
-                    answerHandler.UpdateButtons();
+                    //answerHandler.UpdateButtons();
                 }
             } 
         }

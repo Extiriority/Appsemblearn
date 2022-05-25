@@ -54,11 +54,9 @@ public class AnswerHandler : MonoBehaviour
         dialogueUI.answerAnimationController.HideAnswers();
         dialogueUI.up.SetActive(false);
         
-        //conversationManager.NextQuestion();
-
+        conversationManager.NextQuestion();
         BindingDataToUI();
-        UpdateButtons();
-
+        //UpdateButtons();
         dialogueUI.showDialogue(answer.dialogueObject);
     }
 

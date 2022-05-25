@@ -16,5 +16,6 @@ MonoBehaviour:
   - We gaan jou klaar stampen om een coding god te worden, no worries!
   - En ja ik ben een beetje cringe, maar live with it
   - Ohja en waarom is deze dialogue zo bugged?
-  questions: []
-  question: {fileID: 11400000, guid: 8cf422fbaf38738449d4160c9f462ca1, type: 2}
+  questions:
+  - {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
+  question: {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
