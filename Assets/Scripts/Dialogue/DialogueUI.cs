@@ -4,7 +4,10 @@ using UnityEngine;
 using TMPro;
 public class DialogueUI : MonoBehaviour
 {
+    [Header("Dialogue UI settings")]
+    [Tooltip("Reference your dialogue box here")]
     [SerializeField] private GameObject dialogueBox;
+    [Tooltip("Reference your Text (TMP here)")]
     [SerializeField] private TMP_Text textLabel;
     
     public bool isOpen { get; private set; }

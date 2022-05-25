@@ -6,6 +6,7 @@ using TMPro;
 
 public class TypeWriterEffect : MonoBehaviour
 {
+    [Header("Typewriter settings")]
     [SerializeField][Range(5, 25)] private float typeWriterSpeed = 50f;
 
     public bool isRunning { get; private set; }

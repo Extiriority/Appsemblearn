@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class DialogueActivator : MonoBehaviour, IInteractable
 {
+    [Header("Dialogue Settings")]
+    [Tooltip("Choose a dialogue script for this specific camera when panned to")]
     [SerializeField] private DialogueObject dialogueObject;
 
     private void OnTriggerEnter(Collider other) {
