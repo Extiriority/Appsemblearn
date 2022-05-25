@@ -2,17 +2,27 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
+using UnityEngine;
+using Cinemachine;
+using Unity.VisualScripting;
+using UnityEngine.Events;
+
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueBox;
+    [SerializeField] public DialogueObject dialogueObject;
     [SerializeField] private TMP_Text textLabel;
+    
+    public UnityEvent onDialogueEnded;
     
     public bool isOpen { get; private set; }
     
     private TypeWriterEffect typeWriterEffect;
     private void Start() {
         typeWriterEffect = GetComponent<TypeWriterEffect>();
-        closeDialogueBox();
+        //closeDialogueBox();
+        showDialogue(dialogueObject);
     }
  
     public void showDialogue(DialogueObject dialogueObject) {
@@ -28,7 +38,8 @@ public class DialogueUI : MonoBehaviour
             yield return null;
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
-        closeDialogueBox();
+        onDialogueEnded.Invoke();
+        //closeDialogueBox();
     }
 
     private IEnumerator runTypingEffect(string dialogue) {
@@ -45,6 +56,8 @@ public class DialogueUI : MonoBehaviour
         isOpen = false;
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
+        
+       
     }
 }
  
