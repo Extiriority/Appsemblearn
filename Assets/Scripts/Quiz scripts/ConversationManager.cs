@@ -52,12 +52,14 @@ public class ConversationManager : MonoBehaviour
                 {
                     currectQuestion = next;
                     answerHandler.BindingDataToUI();
-                    //answerHandler.UpdateButtons();
                 }
             } 
         }
     }
 
+    /// <summary>
+    /// Is called in a OnEventEnded
+    /// </summary>
     public void SyncUI()
     {
         GetComponentInChildren<DialogueUI>().dialogueObject.question = currectQuestion;

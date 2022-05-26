@@ -17,7 +17,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     }
 
     public void Interact(CameraPlayer cameraPlayer) {
-        cameraPlayer.DialogueUI.showDialogue(dialogueObject);
+        cameraPlayer.DialogueUI.ShowDialogue(dialogueObject);
     }
     
     private IEnumerator waitTilPan(Collider other) {

@@ -57,7 +57,7 @@ public class AnswerHandler : MonoBehaviour
         conversationManager.NextQuestion();
         BindingDataToUI();
         //UpdateButtons();
-        dialogueUI.showDialogue(answer.dialogueObject);
+        dialogueUI.ShowDialogue(answer.dialogueObject);
     }
 
 

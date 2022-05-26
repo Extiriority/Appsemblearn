@@ -13,7 +13,7 @@ public class CameraPlayer : MonoBehaviour
     public IInteractable interactable { get; set; }
 
     private void Update() {
-        if (DialogueUI.isOpen) return;
+        if (DialogueUI.IsOpen) return;
         interactable?.Interact(this);
     }
 }
