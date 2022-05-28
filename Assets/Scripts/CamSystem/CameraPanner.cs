@@ -11,31 +11,32 @@ namespace CamSystem
 
         private Camera _cam;
         private CameraAnchor _anchor;
-        private Vector3 _originalRotation;
+        private Vector3 _startingRotation;
         
         void Start()
         {
             _anchor = GetComponent<CameraAnchor>();
             _cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-            _originalRotation = transform.eulerAngles;
+            _startingRotation = transform.localEulerAngles;
+            print(_startingRotation);
         }
         
         private void FixedUpdate()
         {
-            Vector3 newRotation = (Vector3) GetMouseToScreenPosition() + _originalRotation;
-            transform.rotation = Quaternion.Euler(newRotation);
+            Vector3 newRotation = (Vector3) GetMouseToScreenPosition() + _startingRotation;
+            transform.SetPositionAndRotation(transform.position,Quaternion.Euler(newRotation)); ;
         }
         
         Vector2 GetMouseToScreenPosition()
         {
             //Axis are inverted dont know why 
             Vector3 mousePos = Input.mousePosition;
-            return new Vector2(-mousePos.y / _cam.pixelHeight, mousePos.x / _cam.pixelWidth ) * mouseCursorMultiplier;
+            return new Vector2(-mousePos.y / _cam.pixelHeight, mousePos.x / _cam.pixelWidth) * mouseCursorMultiplier;
         }
 
         public void ResetRotation()
         {
-            transform.localRotation = Quaternion.Euler(_originalRotation);
+            transform.rotation = Quaternion.Euler(_startingRotation);
         }
     }
 }
