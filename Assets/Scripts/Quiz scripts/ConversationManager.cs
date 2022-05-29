@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class ConversationManager : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class ConversationManager : MonoBehaviour
         answerHandler.BindingDataToUI();
         //answerHandler.UpdateButtons();
     }
- 
+
     /// <summary>
     /// Sends the user to the next question in the queue.
     /// </summary>
@@ -46,14 +47,22 @@ public class ConversationManager : MonoBehaviour
         questionQueue.Dequeue();
         for (int i = 0; i < questionList.Count; i++)
         {
-            if (questionList.Count != 0) {
-                var next = questionQueue.Peek();
-                if (currectQuestion != next)
+            if (questionList.Count != 0)
+            {
+                if (questionQueue.Any())
                 {
-                    currectQuestion = next;
-                    answerHandler.BindingDataToUI();
+                    var next = questionQueue.Peek();
+                    if (currectQuestion != next)
+                    {
+                        currectQuestion = next;
+                        answerHandler.BindingDataToUI();
+                    }
                 }
-            } 
+                else
+                {
+                    gameObject.SetActive(false);
+                }
+            }
         }
     }
 
