@@ -17,7 +17,7 @@ namespace CamSystem
         {
             _anchor = GetComponent<CameraAnchor>();
             _cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-            _startingRotation = transform.localEulerAngles;
+            _startingRotation = transform.localEulerAngles - GetComponentInParent<Transform>().localEulerAngles;
             print(_startingRotation);
         }
         
