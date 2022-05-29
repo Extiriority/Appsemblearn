@@ -3,8 +3,14 @@ using UnityEngine;
 public class DialogueObject : ScriptableObject
 {
     [SerializeField] [TextArea] private string[] dialogue;
-    public string[] Dialogue => dialogue;
-    
+
+    [SerializeField] private Question[] questions;
+
     [SerializeField]
     public Question question;
+
+    public string[] Dialogue => dialogue;
+    public bool HasAnswers => Questions != null && Questions.Length > 0;
+    public Question[] Questions => questions;
+    
 }

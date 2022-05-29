@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee061833eaebaa5478db1c893f29c31e, type: 3}
-  m_Name: TestDialogue
+  m_Name: Uitleg
   m_EditorClassIdentifier: 
   dialogue:
-  - This is some test dialogue
-  - Second dialogue
-  - Last dialogue
+  - We gaan jou klaar stampen om een coding god te worden, no worries!
+  - En ja ik ben een beetje cringe, maar live with it
+  - Ohja en waarom is deze dialogue zo bugged?
   questions:
-  - {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
-  - {fileID: 11400000, guid: 5d5c1faba854f714ebb96309d5f25bdf, type: 2}
-  - {fileID: 11400000, guid: 370e93635a4468b45a434b898820a3c7, type: 2}
-  question: {fileID: 11400000, guid: 565d0efe6a6f2cd4f8114a6e8e6a1c04, type: 2}
+  - {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
+  question: {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
