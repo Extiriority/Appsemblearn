@@ -29,10 +29,17 @@ namespace CamSystem
 
         [Tooltip("Outline mode")] 
         public Outline.Mode outlineMode = Outline.Mode.OutlineAll;
-        
+
+        [Tooltip("Conversation object")]
+        public GameObject conManager;
+
+        [Tooltip("Speech object")]
+        public GameObject soundManager;
+
         [Header("Events")]
         [Tooltip("This event triggers when the camera blend is finished")]
         public UnityEvent onCameraTransitionEnded;
+
         
         [HideInInspector]
         public bool isActive;
@@ -130,6 +137,13 @@ namespace CamSystem
             _vCam.enabled = !_vCam.enabled;
             _panner.enabled = _vCam.enabled;
             isActive = !isActive;
+        }
+
+        public void StartDialogue()
+        {
+            conManager.SetActive(true);
+            soundManager.SetActive(true);
+            _panner.enabled = false;
         }
     }
 }
