@@ -16,9 +16,8 @@ namespace CamSystem
         {
             _cameraAnchors = GetComponentsInChildren<CinemachineVirtualCamera>().ToList();
             _cameraPanners = GetComponentsInChildren<CameraPanner>().ToList();
-            Invoke(nameof(DisableAllAnchors),.1f);
-            Invoke(nameof(ActivateFirstAnchor), .11f);
-
+            DisableAllAnchors();
+            ActivateFirstAnchor();
         }
 
         private void Update()
@@ -38,7 +37,6 @@ namespace CamSystem
 
             foreach (CameraPanner panner in _cameraPanners)
             {
-                panner.ResetRotation();
                 panner.enabled = false;
             }
         }

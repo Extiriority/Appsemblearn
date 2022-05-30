@@ -15,15 +15,15 @@ namespace CamSystem
         
         void Start()
         {
+            _startingRotation = transform.eulerAngles;
             _anchor = GetComponent<CameraAnchor>();
             _cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-            _startingRotation = transform.localEulerAngles - GetComponentInParent<Transform>().localEulerAngles;
-            print(_startingRotation);
         }
         
         private void FixedUpdate()
         {
             Vector3 newRotation = (Vector3) GetMouseToScreenPosition() + _startingRotation;
+            print(newRotation);
             transform.SetPositionAndRotation(transform.position,Quaternion.Euler(newRotation)); ;
         }
         
