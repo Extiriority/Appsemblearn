@@ -23,7 +23,6 @@ namespace CamSystem
         private void FixedUpdate()
         {
             Vector3 newRotation = (Vector3) GetMouseToScreenPosition() + _startingRotation;
-            print(newRotation);
             transform.SetPositionAndRotation(transform.position,Quaternion.Euler(newRotation)); ;
         }
         
