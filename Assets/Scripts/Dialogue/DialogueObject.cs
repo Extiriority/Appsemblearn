@@ -1,3 +1,4 @@
+using CamSystem;
 using UnityEngine;
 [CreateAssetMenu(menuName = "Dialogue/DialogueObject")]
 public class DialogueObject : ScriptableObject
@@ -12,5 +13,7 @@ public class DialogueObject : ScriptableObject
     public string[] Dialogue => dialogue;
     public bool HasAnswers => Questions != null && Questions.Length > 0;
     public Question[] Questions => questions;
+
+    public GameObject continueArrow;
     
 }
