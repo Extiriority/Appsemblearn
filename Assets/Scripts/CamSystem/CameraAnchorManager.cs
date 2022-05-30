@@ -54,7 +54,7 @@ namespace CamSystem
             anchorPath[^1].ToggleVCam();
         }
 
-        private void ActivateAnchor(int anchorIndex)
+        public void ActivateAnchor(int anchorIndex)
         {
             DisableAllAnchors();
             _cameraAnchors[anchorIndex].enabled = true;

@@ -1,3 +1,4 @@
+using CamSystem;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,7 @@ public class AnswerHandler : MonoBehaviour
 {
     private ConversationManager conversationManager;
     private DialogueUI dialogueUI;
+    [SerializeField] private CameraAnchorManager cameraAnchorManager;
 
 
 
@@ -58,7 +60,7 @@ public class AnswerHandler : MonoBehaviour
 
         if (nextQuestionSet == false)
         {
-            dialogueUI.dialogueObject.continueArrow.SetActive(true);
+            cameraAnchorManager.ActivateAnchor(2);
             return;
         }
 

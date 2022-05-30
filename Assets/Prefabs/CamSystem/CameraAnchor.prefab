@@ -195,6 +195,8 @@ MonoBehaviour:
   defaultOutlineColor: {r: 1, g: 0, b: 0, a: 1}
   onHoverOutlineColor: {r: 0, g: 1, b: 0, a: 1}
   outlineMode: 0
+  conManager: {fileID: 0}
+  soundManager: {fileID: 0}
   onCameraTransitionEnded:
     m_PersistentCalls:
       m_Calls: []

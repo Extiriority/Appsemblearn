@@ -63,7 +63,6 @@ public class ConversationManager : MonoBehaviour
                 }
                 else
                 {
-                    
                     gameObject.SetActive(false);
                     return false;
 
