@@ -42,8 +42,10 @@ public class ConversationManager : MonoBehaviour
     /// <summary>
     /// Sends the user to the next question in the queue.
     /// </summary>
-    public void NextQuestion()
+    public bool NextQuestion()
     {
+        if (!questionQueue.Any()) return false; 
+
         questionQueue.Dequeue();
         for (int i = 0; i < questionList.Count; i++)
         {
@@ -56,14 +58,18 @@ public class ConversationManager : MonoBehaviour
                     {
                         currectQuestion = next;
                         answerHandler.BindingDataToUI();
+                        return true;
                     }
                 }
                 else
                 {
                     gameObject.SetActive(false);
+                    return false;
+
                 }
             }
         }
+        return false;
     }
 
     /// <summary>
