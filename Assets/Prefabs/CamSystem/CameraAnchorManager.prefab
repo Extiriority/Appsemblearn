@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a87eb8c90fcf7438492b15e81ed124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anchorPath: []
+  anchorPath:
+  - {fileID: 5437314353274638317}
   backButton: 8
 --- !u!1001 &2611053938550325251
 PrefabInstance:
@@ -109,3 +110,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8019058404204744675, guid: 2da872a8306e9124ca8b79c8a0bd0a30, type: 3}
   m_PrefabInstance: {fileID: 2611053938550325251}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5437314353274638317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8019058404204744686, guid: 2da872a8306e9124ca8b79c8a0bd0a30, type: 3}
+  m_PrefabInstance: {fileID: 2611053938550325251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cda36532584be479c147dc033c98d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
