@@ -59,9 +59,7 @@ namespace CamSystem
 
         private void OnMouseUp()
         {
-            ToggleVCam();
-            InvokeEvents();
-            _anchorManager.SetCurrentAnchor(this);
+            ActivateAnchor();
         }
 
         private void OnMouseEnter()
@@ -144,6 +142,13 @@ namespace CamSystem
             conManager.SetActive(true);
             soundManager.SetActive(true);
             _panner.enabled = false;
+        }
+        
+        public void ActivateAnchor()
+        {
+            ToggleVCam();
+            InvokeEvents();
+            _anchorManager.SetCurrentAnchor(this);
         }
     }
 }
