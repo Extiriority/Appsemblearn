@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450f59b43e3a7034198e66ece1c0a90d, type: 3}
   m_Name: Tweede vraag
   m_EditorClassIdentifier: 
-  questionString: Dit is de tweede vraag
+  questionString: Heb je nog andere vragen?
   answers:
-  - {fileID: 11400000, guid: 9a1b01d8c7c735e44acffd55dc57f543, type: 2}
-  - {fileID: 11400000, guid: ac2911adaff651242b5f5bebaffb3f41, type: 2}
   - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
-  - {fileID: 11400000, guid: c300b1692061d3f43b1b929390fa0877, type: 2}
+  - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
+  - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
+  - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
