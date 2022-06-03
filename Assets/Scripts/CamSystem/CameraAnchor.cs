@@ -5,6 +5,7 @@ using UnityEngine;
 using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine.Events;
+using UnityEngine.Playables;
 
 namespace CamSystem
 {
@@ -40,7 +41,9 @@ namespace CamSystem
         [Tooltip("This event triggers when the camera blend is finished")]
         public UnityEvent onCameraTransitionEnded;
 
-        
+        public PlayableDirector playableDirector;
+
+
         [HideInInspector]
         public bool isActive;
 
@@ -146,9 +149,20 @@ namespace CamSystem
         
         public void ActivateAnchor()
         {
-            ToggleVCam();
-            InvokeEvents();
-            _anchorManager.SetCurrentAnchor(this);
+            if (gameObject.GetComponentInChildren<CinemachineSmoothPath>())
+            {
+                print("has smooth");
+                _anchorManager.ActivateAnchor(2);
+                playableDirector.Play();
+                return;
+            }
+            else
+            {
+                ToggleVCam();
+                InvokeEvents();
+                _anchorManager.SetCurrentAnchor(this);
+                return;
+            }
         }
     }
 }
