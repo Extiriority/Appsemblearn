@@ -7,9 +7,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 {
     private RectTransform rectTransform;
     public Canvas canvas;
-    public string data;
     private CanvasGroup canvasGroup;
     private Vector3 startingPos;
+    public Color data;
 
     private void Start()
     {

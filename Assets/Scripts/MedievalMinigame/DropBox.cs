@@ -6,12 +6,16 @@ using UnityEngine.EventSystems;
 
 public class DropBox : MonoBehaviour, IDropHandler
 {
+    public ShieldManager Shield;
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
-            GetComponentInChildren<TextMeshProUGUI>().text = eventData.pointerDrag.GetComponent<DragDrop>().data;
+            GetComponentInChildren<TextMeshProUGUI>().text = eventData.pointerDrag.GetComponent<DragDrop>().data.ToString();
         }
+
+        Shield.ChangeColor(eventData.pointerDrag.gameObject);
     }
 }
