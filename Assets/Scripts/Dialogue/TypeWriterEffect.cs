@@ -9,10 +9,10 @@ public class TypeWriterEffect : MonoBehaviour
     [SerializeField][Range(5, 25)] private float typeWriterSpeed = 50f;
 
     public bool isRunning { get; private set; }
-    
+    //Punctuation dictionary with float variable to add timer for pauses
     private readonly Dictionary<HashSet<char>, float> punctuations = new() {
-        { new HashSet<char>() { '.', '!', '?' }, 0.7f },
-        { new HashSet<char>() { ',', ';', ':' }, 0.4f }
+        { new HashSet<char> { '.', '!', '?' }, 0.7f },
+        { new HashSet<char> { ',', ';', ':' }, 0.4f }
     };
 
     private Coroutine typingCoroutine;
@@ -24,6 +24,7 @@ public class TypeWriterEffect : MonoBehaviour
         StopCoroutine(typingCoroutine);
         isRunning = false;
     }
+    //read the max char of a dialoguebox and add the char in steps on every waitTime
     private IEnumerator typeText(string textToType, TMP_Text textLabel) {
         isRunning = true;
         textLabel.text = string.Empty;
@@ -43,11 +44,11 @@ public class TypeWriterEffect : MonoBehaviour
                 if (isPunctuation(textToType[i], out float waitTime) && !isLast && !isPunctuation(textToType[i + 1], out _)) {
                     yield return new WaitForSeconds(waitTime);
                 }
-                
+                //If its letter -> play Sans SFX
                 if (!textToType[i].Equals(' ') && !textToType[i].Equals(',') && !textToType[i].Equals('.') && !textToType[i].Equals('!') && !textToType[i].Equals('?')) {
                     SoundManager.instance.play("sans");
                 }
-                
+                //If its punctuation -> play punctuation SFX
                 if (textToType[i].Equals('.')) {
                     SoundManager.instance.play("punctuation");
                 }
@@ -57,6 +58,7 @@ public class TypeWriterEffect : MonoBehaviour
         isRunning = false;
     }
 
+    //Lambda finding all char in one dialogue box content for possible punctuations
     private bool isPunctuation(char character, out float waitTime) {
         foreach (var punctuationCategory in punctuations.Where(punctuationCategory => punctuationCategory.Key.Contains(character))) {
             waitTime = punctuationCategory.Value;

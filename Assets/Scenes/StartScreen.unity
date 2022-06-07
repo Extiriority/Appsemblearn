@@ -243,7 +243,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.5333333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1029,7 +1029,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.5333333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1275,7 +1275,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.5333333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1808,7 +1808,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.5333333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2080,7 +2080,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.5333333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7179,7 +7179,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.5333333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -18225,7 +18225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875272528331866680}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.15560699, y: -0.0037729442, z: 2.399929}
+  m_LocalPosition: {x: -0.15560699, y: -0.17, z: 2.399929}
   m_LocalScale: {x: 100, y: 100, z: 4.423654}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23900,7 +23900,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.5333333, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -33534,7 +33534,7 @@ GameObject:
   - component: {fileID: 3106292447616816550}
   - component: {fileID: 8351073805501126646}
   m_Layer: 0
-  m_Name: CameraAnchor
+  m_Name: BlokIsland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34322,7 +34322,7 @@ MonoBehaviour:
   onHoverOutlineWidth: 5
   defaultOutlineColor: {r: 1, g: 0, b: 0, a: 1}
   onHoverOutlineColor: {r: 0, g: 1, b: 0, a: 1}
-  outlineMode: 0
+  outlineMode: 1
   conManager: {fileID: 0}
   soundManager: {fileID: 0}
   onCameraTransitionEnded:
@@ -34743,7 +34743,7 @@ MonoBehaviour:
   onHoverOutlineWidth: 5
   defaultOutlineColor: {r: 1, g: 0, b: 0, a: 1}
   onHoverOutlineColor: {r: 0, g: 1, b: 0, a: 1}
-  outlineMode: 0
+  outlineMode: 1
   conManager: {fileID: 0}
   soundManager: {fileID: 0}
   onCameraTransitionEnded:
@@ -34924,7 +34924,7 @@ MonoBehaviour:
   onHoverOutlineWidth: 5
   defaultOutlineColor: {r: 1, g: 0, b: 0, a: 1}
   onHoverOutlineColor: {r: 0, g: 1, b: 0, a: 1}
-  outlineMode: 0
+  outlineMode: 1
   conManager: {fileID: 0}
   soundManager: {fileID: 0}
   onCameraTransitionEnded:
@@ -35634,7 +35634,7 @@ MonoBehaviour:
   onHoverOutlineWidth: 5
   defaultOutlineColor: {r: 1, g: 0, b: 0, a: 1}
   onHoverOutlineColor: {r: 0, g: 1, b: 0, a: 1}
-  outlineMode: 0
+  outlineMode: 1
   conManager: {fileID: 0}
   soundManager: {fileID: 0}
   onCameraTransitionEnded:
@@ -37324,7 +37324,7 @@ MonoBehaviour:
   onHoverOutlineWidth: 5
   defaultOutlineColor: {r: 1, g: 0, b: 0, a: 1}
   onHoverOutlineColor: {r: 0, g: 1, b: 0, a: 1}
-  outlineMode: 0
+  outlineMode: 1
   conManager: {fileID: 0}
   soundManager: {fileID: 0}
   onCameraTransitionEnded:
