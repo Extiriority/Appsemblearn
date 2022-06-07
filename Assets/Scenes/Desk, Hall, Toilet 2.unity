@@ -768,6 +768,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194589905}
     m_Modifications:
+    - target: {fileID: 4253070125933231316, guid: 2da872a8306e9124ca8b79c8a0bd0a30, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8019058404204744674, guid: 2da872a8306e9124ca8b79c8a0bd0a30, type: 3}
       propertyPath: m_Name
       value: CameraAnchor
