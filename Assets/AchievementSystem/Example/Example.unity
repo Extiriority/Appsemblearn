@@ -2890,7 +2890,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1928172677}
     m_Modifications:
     - target: {fileID: 37589141270784577, guid: 2eb6c532596d349428b82b20d360550b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -28032,6 +28032,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7290996146491158259, guid: 2eb6c532596d349428b82b20d360550b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 457.4641
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290996146491158259, guid: 2eb6c532596d349428b82b20d360550b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -313.78656
+      objectReference: {fileID: 0}
     - target: {fileID: 7346543949469061576, guid: 2eb6c532596d349428b82b20d360550b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -31558,7 +31566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8496759827116240709, guid: 2eb6c532596d349428b82b20d360550b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8496759827116240709, guid: 2eb6c532596d349428b82b20d360550b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -36683,6 +36691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23953d3cc6573c745b3dc7bc5720c369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1928172677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3586384449932917246, guid: 3a140b31cdd80204580276d4562e951e, type: 3}
+  m_PrefabInstance: {fileID: 3586384449099541479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1928361749
 LightingSettings:
   m_ObjectHideFlags: 0
