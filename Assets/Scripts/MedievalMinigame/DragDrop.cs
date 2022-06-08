@@ -9,7 +9,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public Canvas canvas;
     private CanvasGroup canvasGroup;
     private Vector3 startingPos;
-    public Color data;
+
+    [SerializeField] public Shield shield;
 
     private void Start()
     {

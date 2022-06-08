@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ShieldManager : MonoBehaviour
 {
+    [SerializeField] private MeshFilter modelYouWantToChange;
     public void ChangeColor(GameObject data)
     {
-        this.GetComponent<MeshRenderer>().material.color = data.GetComponent<DragDrop>().data;
+        GameObject.FindGameObjectWithTag("Color").GetComponent<Renderer>().material.color = data.GetComponent<DragDrop>().shield.color;
+    }
+
+    public void ChangeShieldType(GameObject data)
+    {
+        modelYouWantToChange.mesh = data.GetComponent<DragDrop>().shield.shieldType;
     }
 }

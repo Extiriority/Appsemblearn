@@ -15,6 +15,8 @@ TagManager:
   - button4
   - Camera
   - UpDownButton
+  - Color
+  - ShieldType
   layers:
   - Default
   - TransparentFX
