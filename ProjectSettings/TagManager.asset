@@ -17,6 +17,7 @@ TagManager:
   - UpDownButton
   - Color
   - ShieldType
+  - OptionPanel
   layers:
   - Default
   - TransparentFX
