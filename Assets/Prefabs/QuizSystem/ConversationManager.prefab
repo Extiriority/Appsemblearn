@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f802f04a2812f245b417562815e62cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraAnchorManager: {fileID: 0}
 --- !u!1 &5728927059133831535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,7 +1661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420192478128886104, guid: aa826b558f0b2544ca1790743d028dcf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.0136108
+      value: -1.013611
       objectReference: {fileID: 0}
     - target: {fileID: 4420192478128886104, guid: aa826b558f0b2544ca1790743d028dcf, type: 3}
       propertyPath: m_LocalRotation.w

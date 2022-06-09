@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   answerString: Nee
   isCorrect: 0
-  dialogueObject: {fileID: 11400000, guid: c2e60be801713454899c7e1c04935222, type: 2}
+  dialogueObject: {fileID: 11400000, guid: 576fc46453813be4cab5071fb9e44a78, type: 2}

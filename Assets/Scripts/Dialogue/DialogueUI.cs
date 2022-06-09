@@ -1,13 +1,7 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
-using UnityEngine;
-using Cinemachine;
-using Unity.VisualScripting;
-using UnityEngine.Events;
-using UnityEngine.Playables;
 
 public class DialogueUI : MonoBehaviour
 {
