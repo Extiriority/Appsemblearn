@@ -32,18 +32,15 @@ public class OptionSelector : MonoBehaviour
     {
         LoadComponents();
     }
+
     //Helper Functions
     private void LoadComponents()
     {
         _outline = null;
-        //adds an outline to the first childObject
-        if (transform.childCount >= 1)
-        {
-            _outline = transform.GetComponentInChildren<MeshRenderer>().gameObject.AddComponent<Outline>();
-            _outline.OutlineColor = defaultOutlineColor;
-            _outline.OutlineWidth = defaultOutlineWidth;
-            _outline.OutlineMode = outlineMode;
-        }
+        _outline = transform.GetComponentInChildren<MeshRenderer>().gameObject.AddComponent<Outline>();
+        _outline.OutlineColor = defaultOutlineColor;
+        _outline.OutlineWidth = defaultOutlineWidth;
+        _outline.OutlineMode = outlineMode;
     }
 
     private void OnMouseDown()
