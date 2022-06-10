@@ -660,6 +660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KeyTooth
       objectReference: {fileID: 0}
+    - target: {fileID: 3732339634428990057, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
 --- !u!4 &4413706237787077728 stripped
@@ -721,6 +725,10 @@ PrefabInstance:
     - target: {fileID: 3732339634428990057, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
       propertyPath: m_Name
       value: KeyTooth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732339634428990057, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
@@ -784,6 +792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KeyTooth
       objectReference: {fileID: 0}
+    - target: {fileID: 3732339634428990057, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
 --- !u!4 &4413706237979309368 stripped
@@ -846,6 +858,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KeyTooth
       objectReference: {fileID: 0}
+    - target: {fileID: 3732339634428990057, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
 --- !u!4 &4413706238280056514 stripped
@@ -907,6 +923,10 @@ PrefabInstance:
     - target: {fileID: 3732339634428990057, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
       propertyPath: m_Name
       value: KeyTooth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732339634428990057, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492c7934a8db4b64bb3e26bcbdd875be, type: 3}
