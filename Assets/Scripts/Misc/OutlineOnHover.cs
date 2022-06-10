@@ -36,14 +36,12 @@ public class OutlineOnHover : MonoBehaviour
     {
         SetOutlineColor(onHoverOutlineColor);
         SetOutlineWidth(onHoverOutlineWidth);
-        print("On Hover Enter");
     }
 
     private void OnMouseExit()
     {
         SetOutlineColor(defaultOutlineColor);
         SetOutlineWidth(defaultOutlineWidth);
-        print("On Hover Exit");
     }
     
     private void SetOutlineColor(Color color)
