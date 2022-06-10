@@ -15,6 +15,9 @@ TagManager:
   - button4
   - Camera
   - UpDownButton
+  - Canvas
+  - Enemy
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
