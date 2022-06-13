@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Introductie
   m_EditorClassIdentifier: 
   dialogue:
-  - Hallo en welkom!
-  - Bij BlokEiland, de plek waar jij omgetoverd wordt tot software expert!
+  - Hallo en welkom in Assemblearn BlokEiland travel HQ!
+  - Dit is de plek waar jij omgetoverd wordt tot ideale software expert!
   questions:
   - {fileID: 11400000, guid: 8cf422fbaf38738449d4160c9f462ca1, type: 2}
-  question: {fileID: 11400000, guid: 8cf422fbaf38738449d4160c9f462ca1, type: 2}
+  question: {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
