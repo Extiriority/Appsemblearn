@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class DropBox : MonoBehaviour, IDropHandler
 {
-    public Shield Shield;
+    public ShieldManager Shield;
    
 
     public void OnDrop(PointerEventData eventData)
