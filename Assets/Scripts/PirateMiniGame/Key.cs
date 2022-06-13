@@ -7,7 +7,7 @@ namespace PirateMiniGame
 {
     public class Key : MonoBehaviour
     {
-        [Range(10000f, 99999f)][SerializeField] private int keyLayout;
+        [Range(00000f, 99999f)][SerializeField] private int keyLayout;
         private List<KeyTooth> _teeth;
     
         void Start()
@@ -22,7 +22,7 @@ namespace PirateMiniGame
             int j = 0;
             foreach (KeyTooth t in _teeth)
             {
-                t.SetToothValue(keyLayout.ToString()[i]);
+                t.SetToothValue(keyLayout.ToString("00000")[i]);
                 t.SetToothIndex(j);
                 i++;
                 j++;
@@ -38,12 +38,11 @@ namespace PirateMiniGame
         private void SetVariables()
         {
             _teeth = GetComponentsInChildren<KeyTooth>().ToList();
-        
         }
 
         private void SetRandomCode()
         {
-            keyLayout = Random.Range(10000, 99999);
+            keyLayout = Random.Range(0, 99999);
         }
     }
 }

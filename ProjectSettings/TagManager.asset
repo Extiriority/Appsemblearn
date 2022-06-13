@@ -18,6 +18,7 @@ TagManager:
   - Color
   - ShieldType
   - OptionPanel
+  - CodeBlockSlot
   layers:
   - Default
   - TransparentFX
