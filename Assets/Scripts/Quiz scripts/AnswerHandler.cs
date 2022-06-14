@@ -58,7 +58,7 @@ public class AnswerHandler : MonoBehaviour
 
         if (nextQuestionSet == false)
         {
-            cameraAnchorManager.ActivateAnchor(2);
+           // cameraAnchorManager.ActivateAnchor(2);
             return;
         }
 
