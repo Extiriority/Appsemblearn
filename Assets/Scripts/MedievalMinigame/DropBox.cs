@@ -6,13 +6,13 @@ using UnityEngine.EventSystems;
 
 public class DropBox : MonoBehaviour, IDropHandler
 {
-    public ShieldManager Shield;
+    Shield Shield;
    
-
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
         {
+            Shield = FindObjectOfType<Shield>();
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
             DragDrop dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
 
