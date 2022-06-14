@@ -32,7 +32,6 @@ public class CustomerManager : MonoBehaviour
         {
             StartCoroutine(DelayedDialogue(animator.GetCurrentAnimatorStateInfo(0).length));
         }
-
     }
 
     IEnumerator DelayedDialogue(float _delay = 0)

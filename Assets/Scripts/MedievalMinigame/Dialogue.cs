@@ -31,12 +31,14 @@ public class Dialogue : MonoBehaviour
         //Looping through dialogue and running through it again when spacebar is clicked.
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
+            customer.GetComponent<Animator>().SetBool("Talking", true);
             string dialogue = dialogueObject.Dialogue[i];
             textLabel.text = dialogue;
             yield return RunTypingEffect(dialogue);
-
+            customer.GetComponent<Animator>().SetBool("Talking", false);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
+
     }
 
 
