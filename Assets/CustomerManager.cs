@@ -13,6 +13,7 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private GameObject[] customerList;
     [SerializeField] private GameObject currentCustomer;
     [SerializeField] private GameObject dialogueBox;
+    [SerializeField] public DialogueObject requestedItem;
 
     private void Start()
     {
@@ -46,6 +47,12 @@ public class CustomerManager : MonoBehaviour
 
     public void ShowRequestedItem()
     {
-        dialogueBox.GetComponentInChildren<TextMeshProUGUI>().text = currentCustomer.GetComponent<Customer>().requestedShield.color.ToString();
+        for (int i = 0; i < requestedItem.Dialogue.Length; i++)
+        {
+            requestedItem.Dialogue[i] = "testing: " + currentCustomer.GetComponent<Customer>().requestedShield.color.ToString()
+                                         + "I want a type: " + currentCustomer.GetComponent<Customer>().requestedShield.shieldType.ToString();     
+        }
+
+        gameObject.GetComponentInChildren<Dialogue>().ShowDialogue(requestedItem);
     }
 }
