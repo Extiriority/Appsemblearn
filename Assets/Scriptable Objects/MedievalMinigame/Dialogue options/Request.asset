@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Request
   m_EditorClassIdentifier: 
   dialogue:
-  - Hi there, my name is Bob and I really need your help.
-  - Could create the following coat of arms for my household?
+  - Test
+  - rwiue
   questions: []
   question: {fileID: 0}

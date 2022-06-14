@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class CustomerManager : MonoBehaviour
@@ -40,5 +42,10 @@ public class CustomerManager : MonoBehaviour
 
         //Enable Dialogue
         dialogueBox.SetActive(true);
+    }
+
+    public void ShowRequestedItem()
+    {
+        dialogueBox.GetComponentInChildren<TextMeshProUGUI>().text = currentCustomer.GetComponent<Customer>().requestedShield.color.ToString();
     }
 }
