@@ -1,18 +1,11 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class EnableRegion : MonoBehaviour
-{
-    private Animator anim;
+public class EnableRegion : MonoBehaviour {
     public GameObject[] regions;
     public GameObject veil;
 
-    public bool pressed;
     public void Start() {
-        anim = GetComponent<Animator>();
         StartCoroutine(wait());
     }
 
@@ -23,11 +16,8 @@ public class EnableRegion : MonoBehaviour
     }
     
     public void whenButtonClicked() {
-        anim.SetBool("OnClick", true);
-        pressed = true;
         foreach (var region in regions) 
             region.SetActive(region.activeInHierarchy == false);
-        
         veil.SetActive(false);
     }
 }
