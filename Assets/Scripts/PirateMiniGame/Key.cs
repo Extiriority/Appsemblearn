@@ -40,9 +40,10 @@ namespace PirateMiniGame
             _teeth = GetComponentsInChildren<KeyTooth>().ToList();
         }
 
-        private void SetRandomCode()
+        public void SetRandomCode()
         {
             keyLayout = Random.Range(0, 99999);
+            SetKeyLayout();
         }
     }
 }

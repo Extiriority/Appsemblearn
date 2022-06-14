@@ -11,10 +11,12 @@ namespace PirateMiniGame
         public int slotIndex;
         [CanBeNull] public CodeBlock codeBlockInSlot;
         private SlotManager _slotManager;
+        private Key _key;
 
         private void Start()
         {
             _slotManager = GetComponentInParent<SlotManager>();
+            _key = GameObject.FindWithTag("Key").GetComponent<Key>();
         }
         
         public void OnDrop(PointerEventData eventData)
@@ -27,6 +29,8 @@ namespace PirateMiniGame
             
             codeBlockInSlot = eventData.pointerDrag.gameObject.GetComponent<CodeBlock>();
             _slotManager.SetSlotContent(slotIndex, codeBlockInSlot);
+            
+            _key.SetRandomCode();
         }
     }
 }

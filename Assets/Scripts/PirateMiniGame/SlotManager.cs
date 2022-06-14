@@ -47,11 +47,11 @@ namespace PirateMiniGame
             
             for (int i = 0; i < AmountOfSlots; i++)
             {
-                GameObject slotGO = Instantiate(_slotPrefab, transform, false);
-                slotGO.transform.SetParent(transform);
-                RectTransform slotRect = slotGO.GetComponent<RectTransform>();
+                GameObject slotGo = Instantiate(_slotPrefab, transform, false);
+                slotGo.transform.SetParent(transform);
+                RectTransform slotRect = slotGo.GetComponent<RectTransform>();
                 slotRect.anchoredPosition = new Vector2(-750, -slotHeight * i + .4f*_canvas.GetComponent<RectTransform>().rect.height);
-                slotGO.GetComponent<CodeBlockSlot>().slotIndex = i;
+                slotGo.GetComponent<CodeBlockSlot>().slotIndex = i;
             }
         }
 

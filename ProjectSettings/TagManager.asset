@@ -19,6 +19,7 @@ TagManager:
   - ShieldType
   - OptionPanel
   - CodeBlockSlot
+  - Key
   layers:
   - Default
   - TransparentFX
