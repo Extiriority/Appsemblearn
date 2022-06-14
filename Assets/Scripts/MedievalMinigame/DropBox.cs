@@ -1,35 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DropBox : MonoBehaviour, IDropHandler
+public class DropBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] Types dropboxType = new Types();
+    [SerializeField] Texture2D blockedCursor;
+
     Shield Shield;
-   
+
     public void OnDrop(PointerEventData eventData)
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
         if (eventData.pointerDrag != null)
         {
-            Shield = FindObjectOfType<Shield>();
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
             DragDrop dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
-
-            if (dragDrop.shield != null)
+            
+            if(dragDrop.dropboxType.ToString() == this.dropboxType.ToString())
             {
-                GetComponentInChildren<TextMeshProUGUI>().text = eventData.pointerDrag.GetComponent<DragDrop>().shield.name;
-                Shield.ChangeShieldType(eventData.pointerDrag.gameObject);
-            }
-            else
-            {
-                GetComponentInChildren<TextMeshProUGUI>().text = "#" + ColorUtility.ToHtmlStringRGB( eventData.pointerDrag.GetComponent<DragDrop>().color);
-                Shield.ChangeColor(eventData.pointerDrag.gameObject);
-            }
+                Shield = FindObjectOfType<Shield>();
+                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
 
+
+                if (dragDrop.shield != null)
+                {
+                    GetComponentInChildren<TextMeshProUGUI>().text = eventData.pointerDrag.GetComponent<DragDrop>().shield.name;
+                    Shield.ChangeShieldType(eventData.pointerDrag.gameObject);
+                }
+                else
+                {
+                    GetComponentInChildren<TextMeshProUGUI>().text = "#" + ColorUtility.ToHtmlStringRGB(eventData.pointerDrag.GetComponent<DragDrop>().color);
+                    Shield.ChangeColor(eventData.pointerDrag.gameObject);
+                }
+            }
         }
+    }
 
-       
-       
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (eventData.pointerDrag == null) return;
+
+        DragDrop dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
+
+        if (dragDrop.dropboxType.ToString() != this.dropboxType.ToString())
+            Cursor.SetCursor(blockedCursor, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 }
+
+public enum Types
+{
+    Shield,
+    Color,
+    Icon
+};
