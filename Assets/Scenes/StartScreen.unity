@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771f80f66f259da4388759c32cad8044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseCursorMultiplier: 8
+  mouseCursorMultiplier: 1
 --- !u!114 &336460829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,7 +1317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &660053885
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771f80f66f259da4388759c32cad8044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseCursorMultiplier: 8
+  mouseCursorMultiplier: 1
 --- !u!114 &827851905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,7 +2036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771f80f66f259da4388759c32cad8044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseCursorMultiplier: 8
+  mouseCursorMultiplier: 1
 --- !u!114 &949592066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3683,7 +3683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771f80f66f259da4388759c32cad8044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseCursorMultiplier: 8
+  mouseCursorMultiplier: 1
 --- !u!114 &1477248414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3979,7 +3979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771f80f66f259da4388759c32cad8044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseCursorMultiplier: 8
+  mouseCursorMultiplier: 1
 --- !u!114 &1683288105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9519,7 +9519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771f80f66f259da4388759c32cad8044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseCursorMultiplier: 8
+  mouseCursorMultiplier: 1
 --- !u!114 &1920058886
 MonoBehaviour:
   m_ObjectHideFlags: 0

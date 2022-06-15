@@ -3,72 +3,79 @@ using UnityEngine;
 public class Animation : MonoBehaviour
 {
     private Animator anim;
- 
+    private static readonly int onClick = Animator.StringToHash("OnClick");
+    private static readonly int tutorialClick = Animator.StringToHash("TutorialClick");
+    private static readonly int pirateClick = Animator.StringToHash("PirateClick");
+    private static readonly int cavernClick = Animator.StringToHash("CavernClick");
+    private static readonly int iceClick = Animator.StringToHash("IceClick");
+    private static readonly int lavaClick = Animator.StringToHash("LavaClick");
+    private static readonly int medievalClick = Animator.StringToHash("MedievalClick");
+
     private void Awake() {
         anim = GetComponent<Animator>();
     }
  
     public void Pressed() {
-        anim.SetBool("OnClick", true);
+        anim.SetBool(onClick, true);
     }
     
     public void MedievalPressed() {
-        anim.SetBool("TutorialClick", false);
-        anim.SetBool("PirateClick", false);
-        anim.SetBool("CavernClick", false);
-        anim.SetBool("IceClick", false);
-        anim.SetBool("LavaClick", false);
+        anim.SetBool(tutorialClick, false);
+        anim.SetBool(pirateClick, false);
+        anim.SetBool(cavernClick, false);
+        anim.SetBool(iceClick, false);
+        anim.SetBool(lavaClick, false);
         
-        anim.SetBool("MedievalClick", true);
+        anim.SetBool(medievalClick, true);
     }
     
     public void TutorialPressed() {
-        anim.SetBool("MedievalClick", false);
-        anim.SetBool("PirateClick", false);
-        anim.SetBool("CavernClick", false);
-        anim.SetBool("IceClick", false);
-        anim.SetBool("LavaClick", false);
+        anim.SetBool(medievalClick, false);
+        anim.SetBool(pirateClick, false);
+        anim.SetBool(cavernClick, false);
+        anim.SetBool(iceClick, false);
+        anim.SetBool(lavaClick, false);
         
-        anim.SetBool("TutorialClick", true);
+        anim.SetBool(tutorialClick, true);
     }
     
     public void PiratePressed() {
-        anim.SetBool("TutorialClick", false);
-        anim.SetBool("MedievalClick", false);   
-        anim.SetBool("CavernClick", false);
-        anim.SetBool("IceClick", false);
-        anim.SetBool("LavaClick", false);
+        anim.SetBool(tutorialClick, false);
+        anim.SetBool(medievalClick, false);   
+        anim.SetBool(cavernClick, false);
+        anim.SetBool(iceClick, false);
+        anim.SetBool(lavaClick, false);
         
-        anim.SetBool("PirateClick", true);
+        anim.SetBool(pirateClick, true);
     }
     
     public void IcePressed() {
-        anim.SetBool("TutorialClick", false);
-        anim.SetBool("PirateClick", false);
-        anim.SetBool("MedievalClick", false);   
-        anim.SetBool("CavernClick", false);
-        anim.SetBool("LavaClick", false);
+        anim.SetBool(tutorialClick, false);
+        anim.SetBool(pirateClick, false);
+        anim.SetBool(medievalClick, false);   
+        anim.SetBool(cavernClick, false);
+        anim.SetBool(lavaClick, false);
         
-        anim.SetBool("IceClick", true);
+        anim.SetBool(iceClick, true);
     }
     
     public void CavernPressed() {
-        anim.SetBool("TutorialClick", false);
-        anim.SetBool("PirateClick", false);
-        anim.SetBool("MedievalClick", false);   
-        anim.SetBool("IceClick", false);
-        anim.SetBool("LavaClick", false);
+        anim.SetBool(tutorialClick, false);
+        anim.SetBool(pirateClick, false);
+        anim.SetBool(medievalClick, false);   
+        anim.SetBool(iceClick, false);
+        anim.SetBool(lavaClick, false);
         
-        anim.SetBool("CavernClick", true);
+        anim.SetBool(cavernClick, true);
     }
     
     public void LavaPressed() {
-        anim.SetBool("TutorialClick", false);
-        anim.SetBool("PirateClick", false);
-        anim.SetBool("MedievalClick", false);   
-        anim.SetBool("IceClick", false);
-        anim.SetBool("CavernClick", false);
+        anim.SetBool(tutorialClick, false);
+        anim.SetBool(pirateClick, false);
+        anim.SetBool(medievalClick, false);   
+        anim.SetBool(iceClick, false);
+        anim.SetBool(cavernClick, false);
         
-        anim.SetBool("LavaClick", true);
+        anim.SetBool(lavaClick, true);
     }
 }
