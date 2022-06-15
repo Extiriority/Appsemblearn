@@ -13,4 +13,8 @@ public class Animation : MonoBehaviour
     public void Pressed() {
         anim.SetBool("OnClick", true);
     }
+    
+    public void MedievalPressed() {
+        anim.SetBool("MedievalClick", true);
+    }
 }
