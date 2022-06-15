@@ -6,8 +6,10 @@ public class EnemyShipMovement : MonoBehaviour
 {
 
     public GameObject target;
-    [SerializeField] float rotSpeed = 20;
-    [SerializeField] float circleSpeed = 1.5f;
+    [SerializeField] public float rotSpeed = 20;
+    [SerializeField] public float circleSpeed = 1.5f;
+    [SerializeField] public float approachSpeed = 0.5f;
+    private EnemyHealth enemyHealth;
     private Rigidbody2D body;
     Transform TargetTransform;
     
@@ -18,6 +20,7 @@ public class EnemyShipMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         target = GameObject.Find("Player");
         TargetTransform = target.transform;
+        enemyHealth = GetComponent<EnemyHealth>();
         
     }
 
@@ -31,12 +34,19 @@ public class EnemyShipMovement : MonoBehaviour
         // Now use Lerp as you did
         transform.right = Vector3.Lerp(transform.right, targetDirection, rotSpeed * Time.deltaTime);
 
-        body.transform.position += body.transform.right * 0.1f;
+        body.transform.position += body.transform.right * approachSpeed;
         body.transform.position += body.transform.up * circleSpeed;
 
 
         body.transform.position = new Vector2(Mathf.Clamp(body.transform.position.x, 0f, Screen.width), Mathf.Clamp(body.transform.position.y, 0f, Screen.height));
 
+
+        if (enemyHealth.enemyHealth == 0)
+        {
+            rotSpeed = 0;
+            circleSpeed = 0;
+            approachSpeed = 0;
+        }
         
     }
     

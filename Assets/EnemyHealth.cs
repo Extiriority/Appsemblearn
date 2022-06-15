@@ -5,13 +5,14 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
 
-    [SerializeField] float enemyHealth = 1;
+    [SerializeField] public float enemyHealth = 1;
     [SerializeField] public GameObject enemyShip;
     [SerializeField] public GameObject playerBullet;
     [SerializeField] float vulnerability;
     //EnemyShipMovement enemyShipMovement;  
     Shooting shooting;
     public GameObject target;
+    public EnemySpawn enemySpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,27 +22,32 @@ public class EnemyHealth : MonoBehaviour
         //Debug.Log(shooting.bulletType);
         target = GameObject.Find("Player");
         shooting = target.GetComponent<Shooting>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
-
         
-        if (enemyHealth == 0)
-        {
-            Destroy(enemyShip);
-        }
+        
+        
+        
     }
 
     void OnTriggerEnter2D(Collider2D playerBullet)
     {
+        
         if (shooting.bulletType == vulnerability)
         {
             if (playerBullet.tag == "PlayerBullet")
             {
                 enemyHealth -= 1;
+
+                if (enemyHealth == 0)
+                {
+                    enemySpawn.liveShipCount--;
+                }
             }
         }
         

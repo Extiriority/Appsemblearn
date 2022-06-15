@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Shooting : MonoBehaviour
 {
 
@@ -34,6 +35,8 @@ public class Shooting : MonoBehaviour
             
 
         }
+
+       
     }
 
     void Shoot()
@@ -57,5 +60,15 @@ public class Shooting : MonoBehaviour
         Invoke("CanShootAgain", 1);
     }
 
+
+    public void SetBulletTo1 ()
+    {
+        bulletType = 1;
+    }
+
+    public void SetBulletTo2()
+    {
+        bulletType = 2;
+    }
 }
 

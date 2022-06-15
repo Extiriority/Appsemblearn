@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PlunderPrototype.unity
+    guid: 3a6b31d8769815345806507b84d84977
+  - enabled: 1
+    path: Assets/Scenes/PlunderPrototypeCannonLoad.unity
+    guid: 9b7bff276e3d87f4193918b1026e74a4
   m_configObjects: {}

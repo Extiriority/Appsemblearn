@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 6900886438225492949}
   - component: {fileID: 6900886438225492952}
   - component: {fileID: 6900886438225492953}
+  - component: {fileID: 1600578722}
   m_Layer: 5
   m_Name: EnemyShip
   m_TagString: Enemy
@@ -131,9 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968bdc243c21cf4389cfef4e9eb6047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1156900706114591704, guid: dd23a9a1c9abb5146b88631f3f2f663e, type: 3}
+  target: {fileID: 0}
   rotSpeed: 0.005
   circleSpeed: 1.5
+  approachSpeed: 0.5
 --- !u!61 &6900886438225492950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -196,8 +198,9 @@ MonoBehaviour:
   enemyHealth: 5
   enemyShip: {fileID: 6900886438225492947}
   playerBullet: {fileID: 936159750799243004, guid: 5d8072a3f9ec3f348af1b84f042cc42a, type: 3}
-  vulnerability: 0
+  vulnerability: 1
   target: {fileID: 0}
+  enemySpawn: {fileID: 0}
 --- !u!114 &6900886438225492953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +215,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 6900886438809052645}
   enemyBulletPrefab: {fileID: 936159750799243004, guid: 559a4cf0228e72a4cb7ea7b9c458f4c9, type: 3}
+--- !u!114 &1600578722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900886438225492947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0444484f9f8cdc4986870d4d407f59a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCanvas: {fileID: 0}
+  lockPickingCanvas: {fileID: 0}
 --- !u!1 &6900886438809052644
 GameObject:
   m_ObjectHideFlags: 0

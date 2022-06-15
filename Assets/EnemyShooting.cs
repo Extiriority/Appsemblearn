@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     public Transform FirePoint;
-    
+    private EnemyHealth enemyHealth;
     public GameObject enemyBulletPrefab;
     
     Transform canvasTransform;
@@ -17,6 +17,7 @@ public class EnemyShooting : MonoBehaviour
         Invoke("Shoot", 1);
         canvas = GameObject.Find("Canvas");
         canvasTransform = canvas.transform;
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -29,11 +30,16 @@ public class EnemyShooting : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(enemyBulletPrefab, FirePoint.position, FirePoint.rotation);
 
-        bullet.transform.SetParent(canvasTransform);
+        if (enemyHealth.enemyHealth > 0)
+        {
+            GameObject bullet = Instantiate(enemyBulletPrefab, FirePoint.position, FirePoint.rotation);
 
-        Invoke("Shoot", 4);
+            bullet.transform.SetParent(canvasTransform);
+
+            Invoke("Shoot", 4);
+
+        }
 
     }
 }
