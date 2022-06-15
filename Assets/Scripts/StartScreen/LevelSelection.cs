@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelSelection : MonoBehaviour
@@ -9,9 +7,10 @@ public class LevelSelection : MonoBehaviour
     [SerializeField] public Level levelData;
     [SerializeField] public Canvas canvas;
 
-    public void ShowLevelInfo()
-    {
+    public void LoadTutorialLevel() {
         SceneManager.LoadScene(1);
     }
-
+    public void LoadMedievalLevel() {
+        SceneManager.LoadScene(2);
+    }
 }
