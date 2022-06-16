@@ -6,6 +6,7 @@ using TMPro;
 public class ShieldSelection : MonoBehaviour
 {
     [SerializeField] Outline outline;
+    [SerializeField] bool canBeSelectedInWorkshop;
 
     private void OnMouseEnter()
     {
