@@ -12,8 +12,10 @@ public class CustomerManager : MonoBehaviour
     [Header("All potential customers")]
     [SerializeField] private GameObject[] customerList;
     [SerializeField] private GameObject currentCustomer;
-    [SerializeField] private GameObject dialogueBox;
-    [SerializeField] public DialogueObject requestedItem;
+    [SerializeField] private GameObject customerUI;
+    public GameObject requestBox;
+    public GameObject dialogueBox;
+
 
     private void Start()
     {
@@ -42,17 +44,12 @@ public class CustomerManager : MonoBehaviour
         yield return new WaitForSeconds(_delay);
 
         //Enable Dialogue
-        dialogueBox.SetActive(true);
+        customerUI.SetActive(true);
     }
 
     public void ShowRequestedItem()
     {
-        for (int i = 0; i < requestedItem.Dialogue.Length; i++)
-        {
-            requestedItem.Dialogue[i] = "testing: " + currentCustomer.GetComponent<Customer>().requestedShield.color.ToString()
-                                         + "I want a type: " + currentCustomer.GetComponent<Customer>().requestedShield.shieldType.ToString();     
-        }
-
-        gameObject.GetComponentInChildren<Dialogue>().ShowDialogue(requestedItem);
+        dialogueBox.SetActive(false);
+        requestBox.SetActive(true);
     }
 }
