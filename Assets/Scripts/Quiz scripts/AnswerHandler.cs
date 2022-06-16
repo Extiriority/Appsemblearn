@@ -9,8 +9,7 @@ public class AnswerHandler : MonoBehaviour
 {
     private ConversationManager conversationManager;
     private DialogueUI dialogueUI;
-
-
+    [SerializeField] private CameraAnchorManager cameraAnchorManager;
 
     private void Awake()
     {
@@ -58,8 +57,10 @@ public class AnswerHandler : MonoBehaviour
         bool nextQuestionSet = conversationManager.NextQuestion();
 
         if (nextQuestionSet == false)
+        {
+            cameraAnchorManager.ActivateAnchor(2);
             return;
-        
+        }
 
         dialogueUI.ShowDialogue(answer.dialogueObject);
     }
