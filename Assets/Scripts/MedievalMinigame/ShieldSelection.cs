@@ -2,26 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class ShieldSelection : MonoBehaviour
+public class ShieldSelection : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Outline outline;
-    [SerializeField] bool canBeSelectedInWorkshop;
 
-    private void OnMouseEnter()
+    [Header("Shield Selection In Workshop")]
+    [SerializeField] bool canBeSelectedInWorkshop;
+    [SerializeField] public GameObject shield;
+
+    Shield Shield;
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
         outline.enabled = true;
-        FindObjectOfType<SelectionManager>().GetComponent<TextMeshProUGUI>().text = GetComponentInParent<Outline>().gameObject.name;
+
+        if(!canBeSelectedInWorkshop)
+            FindObjectOfType<SelectionManager>().GetComponent<TextMeshProUGUI>().text = GetComponentInParent<Outline>().gameObject.name;
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
         outline.enabled = false;
-        FindObjectOfType<SelectionManager>().GetComponent<TextMeshProUGUI>().text = "";
+
+        if(!canBeSelectedInWorkshop)
+            FindObjectOfType<SelectionManager>().GetComponent<TextMeshProUGUI>().text = "";
     }
 
-/*    private void OnMouseOver()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("over");
-    }*/
+        if (canBeSelectedInWorkshop)
+        {
+            Shield = FindObjectOfType<Shield>();
+            Shield.ChangeShieldType(gameObject);
+        }
+        
+
+    }
+
+    /*    private void OnMouseOver()
+        {
+            Debug.Log("over");
+        }*/
 }

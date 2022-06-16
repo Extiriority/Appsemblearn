@@ -19,6 +19,7 @@ public class Shield : MonoBehaviour
     public void ChangeShieldType(GameObject data)
     {
         this.gameObject.SetActive(false);
-        data.GetComponent<DragDrop>().shield.SetActive(true);
+        //data.GetComponent<DragDrop>().shield.SetActive(true);
+        data.GetComponent<ShieldSelection>().shield.SetActive(true);
     }
 }
