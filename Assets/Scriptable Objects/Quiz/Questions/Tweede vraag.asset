@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionString: Heb je nog andere vragen?
   answers:
-  - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
-  - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
-  - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
-  - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
+  - {fileID: 11400000, guid: edd7b92a31d7afa41857691824409944, type: 2}
+  - {fileID: 11400000, guid: 2a0a015d384b95d4d878fc8c4aaf2ce3, type: 2}
+  - {fileID: 11400000, guid: f9a6c9cd813ad8144a118a353574a563, type: 2}
+  - {fileID: 11400000, guid: de4075ff7091cfa46a424b158dc8c81d, type: 2}

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ca9ee4445b0d6449e7d74fa18f7203, type: 3}
+  m_Name: Geen vragen 3
+  m_EditorClassIdentifier: 
+  answerString: Begin nou maar
+  isCorrect: 0
+  dialogueObject: {fileID: 11400000, guid: 0730fdecab35d74498d4259b373f68ab, type: 2}

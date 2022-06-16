@@ -888,6 +888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
 --- !u!114 &1001951947
