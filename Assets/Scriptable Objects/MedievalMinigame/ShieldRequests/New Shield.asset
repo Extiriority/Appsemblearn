@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06cde815a4c94043a025fbba8cd43cf, type: 3}
   m_Name: New Shield
   m_EditorClassIdentifier: 
-  shieldType: {fileID: 0}
+  shieldType: {fileID: 5437314353404241389, guid: d2f146e08172db843b60f61cdf662d85, type: 3}
   color: {r: 0.14346743, g: 0.9811321, b: 0.8761672, a: 0}
-  icon: {fileID: 0}
+  icon: {fileID: 919132149155446097, guid: 1217762f95dd65f41a230077ee98b8e2, type: 3}

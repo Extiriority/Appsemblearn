@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +14,26 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private GameObject[] customerList;
     [SerializeField] private GameObject currentCustomer;
     [SerializeField] private GameObject customerUI;
-    public GameObject requestBox;
+    
     public GameObject dialogueBox;
-
+    
+    [Header("Request fields")]
+    public GameObject requestBox;
+    public TextMeshProUGUI colorBox;
+    public TextMeshProUGUI typeBox;
+    public TextMeshProUGUI iconBox;
 
     private void Start()
     {
-        currentCustomer = customerList[0];
+        SetRandomCustomer();
         animator = currentCustomer.GetComponent<Animator>();
+    }
+
+    private void SetRandomCustomer()
+    {
+        System.Random rnd = new();
+        int index = rnd.Next(customerList.Length);
+        currentCustomer = customerList[index];
     }
 
     private void Update()
@@ -51,5 +64,9 @@ public class CustomerManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         requestBox.SetActive(true);
+        Customer customer = currentCustomer.GetComponent<Customer>();
+        colorBox.text = "#" + ColorUtility.ToHtmlStringRGB(customer.requestedShield.color); 
+        typeBox.text = customer.requestedShield.shieldType.name.ToString();
+        iconBox.text = customer.requestedShield.icon.ToString();
     }
 }
