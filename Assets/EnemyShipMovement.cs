@@ -25,7 +25,7 @@ public class EnemyShipMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // erase any position difference in the Z axis
         // direction will be a flat vector in the global XY plane without depth information
