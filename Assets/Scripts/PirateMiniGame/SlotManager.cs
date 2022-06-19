@@ -17,7 +17,9 @@ namespace PirateMiniGame
         public int slotHeight = 25;
         public bool IsSolved;
         [SerializeField] private TextMeshProUGUI _feedbackText;
-
+        [SerializeField] private Animator _keyAnimator;
+        [SerializeField] private Animator _chestAnimator;
+        
         private void Start()
         {
             _slots = new CodeBlockSlot[AmountOfSlots];
@@ -99,15 +101,39 @@ namespace PirateMiniGame
 
         public void TryKey()
         {
-            string text = GetSolved() ? "Congratulations" : "Try again...";
-            StartCoroutine(SetFeedbackText(text, 0f));
-            StartCoroutine(SetFeedbackText("", 2f));
+            PlayAnimations();
+            bool solved = GetSolved();
+            string text = solved ? "Congratulations" : "Try again...";
+            StartCoroutine(SetFeedbackText(text, 2f));
+            StartCoroutine(SetFeedbackText("", 4f));
+            Invoke(nameof(ResetAnimations),4f);
+
+            if (solved)
+            {
+                ToMainMenu();
+            }
         }
 
         private IEnumerator SetFeedbackText(string text, float delay)
         {
             yield return new WaitForSeconds(delay);
             _feedbackText.text = text;
+        }
+
+        private void PlayAnimations()
+        {
+            _keyAnimator.SetBool("UseKey",true);
+            _chestAnimator.SetBool("TurnChest", true);
+        }
+        private void ResetAnimations()
+        {
+            _keyAnimator.SetBool("UseKey",false);
+            _chestAnimator.SetBool("TurnChest", false);
+        }
+
+        private void ToMainMenu()
+        {
+            print("Goto main menu");
         }
     }
 }
