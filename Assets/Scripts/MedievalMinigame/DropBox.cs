@@ -34,6 +34,7 @@ public class DropBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoint
                 else
                 {
                     GetComponentInChildren<TextMeshProUGUI>().text = "#" + ColorUtility.ToHtmlStringRGB(eventData.pointerDrag.GetComponent<DragDrop>().color);
+                    Debug.Log(Shield.gameObject.name);
                     Shield.ChangeColor(eventData.pointerDrag.gameObject);
                 }
             }

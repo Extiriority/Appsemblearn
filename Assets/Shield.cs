@@ -12,6 +12,7 @@ public class Shield : MonoBehaviour
 
     public void ChangeColor(GameObject data)
     {
+        Debug.Log(GameObject.FindGameObjectWithTag("Color").gameObject.name);
         GameObject.FindGameObjectWithTag("Color").GetComponent<Renderer>().material.color = data.GetComponent<DragDrop>().color;
         GetComponentInParent<ShieldManager>().currentColor = data.GetComponent<DragDrop>().color;
     }

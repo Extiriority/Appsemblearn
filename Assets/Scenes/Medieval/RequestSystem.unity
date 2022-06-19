@@ -11542,11 +11542,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e7eeb443316744c8fbfba093ff1c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customerList:
-  - {fileID: 1912861003}
+  requestList: []
   currentCustomer: {fileID: 0}
+  customerUI: {fileID: 0}
   dialogueBox: {fileID: 1029851657}
-  requestedItem: {fileID: 11400000, guid: e97dd38fdf61fd643ae231a2c61c3bf9, type: 2}
+  requestBox: {fileID: 0}
+  colorBox: {fileID: 0}
+  typeBox: {fileID: 0}
+  iconBox: {fileID: 0}
 --- !u!1 &1668868458
 GameObject:
   m_ObjectHideFlags: 0
@@ -17695,7 +17698,7 @@ GameObject:
   - component: {fileID: 4083819928529828582}
   m_Layer: 0
   m_Name: Wood
-  m_TagString: Color
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
