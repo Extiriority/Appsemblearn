@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 
 namespace PirateMiniGame
@@ -15,35 +16,26 @@ namespace PirateMiniGame
         [SerializeField] private GameObject _slotPrefab;
         public int slotHeight = 25;
         public bool IsSolved;
-        
+        [SerializeField] private TextMeshProUGUI _feedbackText;
 
         private void Start()
         {
             _slots = new CodeBlockSlot[AmountOfSlots];
             _slotValues = new string[AmountOfSlots];
             _canvas = GetComponentInParent<Canvas>();
+            StartCoroutine(SetFeedbackText("",0f));
         }
 
         private void FixedUpdate()
         {
-            //ReadSlotContent();
             IsSolved = GetSolved();
         }
-
-        private void ReadSlotContent()
-        {
-            for (int i = 0; i < AmountOfSlots; i++)
-            {
-                print(_slots);
-                //SetSlotContent(i, _slots[i].codeBlockInSlot);
-            }
-        }
+        
 
         private void PlaceSlots()
         {
             int _totalSlotHeight = 550;
             int topScreenPadding = 50;
-            
             
             for (int i = 0; i < AmountOfSlots; i++)
             {
@@ -103,6 +95,19 @@ namespace PirateMiniGame
         public bool GetSolved()
         {
             return GetContentString() == "0123456789";
+        }
+
+        public void TryKey()
+        {
+            string text = GetSolved() ? "Congratulations" : "Try again...";
+            StartCoroutine(SetFeedbackText(text, 0f));
+            StartCoroutine(SetFeedbackText("", 2f));
+        }
+
+        private IEnumerator SetFeedbackText(string text, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            _feedbackText.text = text;
         }
     }
 }
