@@ -11,8 +11,8 @@ public class CustomerManager : MonoBehaviour
     private Animator animator;
 
     [Header("All potential customers")]
-    [SerializeField] private GameObject[] customerList;
-    [SerializeField] private GameObject currentCustomer;
+    [SerializeField] private ShieldSO[] requestList;
+    [SerializeField] private Customer currentCustomer;
     [SerializeField] private GameObject customerUI;
     
     public GameObject dialogueBox;
@@ -32,8 +32,8 @@ public class CustomerManager : MonoBehaviour
     private void SetRandomCustomer()
     {
         System.Random rnd = new();
-        int index = rnd.Next(customerList.Length);
-        currentCustomer = customerList[index];
+        int index = rnd.Next(requestList.Length);
+        currentCustomer.requestedShield = requestList[index];
     }
 
     private void Update()
@@ -65,8 +65,13 @@ public class CustomerManager : MonoBehaviour
         dialogueBox.SetActive(false);
         requestBox.SetActive(true);
         Customer customer = currentCustomer.GetComponent<Customer>();
-        colorBox.text = "#" + ColorUtility.ToHtmlStringRGB(customer.requestedShield.color); 
-        typeBox.text = customer.requestedShield.shieldType.name.ToString();
-        iconBox.text = customer.requestedShield.icon.ToString();
+        colorBox.text = "Color: " + "#" + ColorUtility.ToHtmlStringRGB(customer.requestedShield.color); 
+        typeBox.text =  "Type: " + customer.requestedShield.shieldType.name.ToString();
+        iconBox.text =  "Icon: " + customer.requestedShield.icon.ToString();
+    }
+
+    public void HideUi()
+    {
+        customerUI.SetActive(false);
     }
 }
