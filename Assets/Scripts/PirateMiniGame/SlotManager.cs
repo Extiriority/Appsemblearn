@@ -4,6 +4,7 @@ using System.Linq;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PirateMiniGame
 {
@@ -19,12 +20,13 @@ namespace PirateMiniGame
         [SerializeField] private TextMeshProUGUI _feedbackText;
         [SerializeField] private Animator _keyAnimator;
         [SerializeField] private Animator _chestAnimator;
-        
+        private AudioSource _audio;
         private void Start()
         {
             _slots = new CodeBlockSlot[AmountOfSlots];
             _slotValues = new string[AmountOfSlots];
             _canvas = GetComponentInParent<Canvas>();
+            _audio = GetComponent<AudioSource>();
             StartCoroutine(SetFeedbackText("",0f));
         }
 
@@ -104,6 +106,7 @@ namespace PirateMiniGame
             PlayAnimations();
             bool solved = GetSolved();
             string text = solved ? "Congratulations" : "Try again...";
+            Invoke(nameof(PlayOpeningSound), 1.5f);
             StartCoroutine(SetFeedbackText(text, 2f));
             StartCoroutine(SetFeedbackText("", 4f));
             Invoke(nameof(ResetAnimations),4f);
@@ -134,6 +137,11 @@ namespace PirateMiniGame
         private void ToMainMenu()
         {
             print("Goto main menu");
+        }
+
+        private void PlayOpeningSound()
+        {
+            _audio.Play();
         }
     }
 }
