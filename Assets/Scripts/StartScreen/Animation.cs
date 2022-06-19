@@ -25,7 +25,7 @@ public class Animation : MonoBehaviour
         anim.SetBool(cavernClick, false);
         anim.SetBool(iceClick, false);
         anim.SetBool(lavaClick, false);
-        
+        SoundManager.instance.play("Select");
         anim.SetBool(medievalClick, true);
     }
     
@@ -35,7 +35,7 @@ public class Animation : MonoBehaviour
         anim.SetBool(cavernClick, false);
         anim.SetBool(iceClick, false);
         anim.SetBool(lavaClick, false);
-        
+        SoundManager.instance.play("Select");
         anim.SetBool(tutorialClick, true);
     }
     
@@ -45,7 +45,7 @@ public class Animation : MonoBehaviour
         anim.SetBool(cavernClick, false);
         anim.SetBool(iceClick, false);
         anim.SetBool(lavaClick, false);
-        
+        SoundManager.instance.play("Select");
         anim.SetBool(pirateClick, true);
     }
     
@@ -55,7 +55,7 @@ public class Animation : MonoBehaviour
         anim.SetBool(medievalClick, false);   
         anim.SetBool(cavernClick, false);
         anim.SetBool(lavaClick, false);
-        
+        SoundManager.instance.play("Select");
         anim.SetBool(iceClick, true);
     }
     
@@ -65,7 +65,7 @@ public class Animation : MonoBehaviour
         anim.SetBool(medievalClick, false);   
         anim.SetBool(iceClick, false);
         anim.SetBool(lavaClick, false);
-        
+        SoundManager.instance.play("Select");
         anim.SetBool(cavernClick, true);
     }
     
@@ -75,7 +75,7 @@ public class Animation : MonoBehaviour
         anim.SetBool(medievalClick, false);   
         anim.SetBool(iceClick, false);
         anim.SetBool(cavernClick, false);
-        
+        SoundManager.instance.play("Select");
         anim.SetBool(lavaClick, true);
     }
 }
