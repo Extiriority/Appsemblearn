@@ -13,12 +13,16 @@ namespace PirateMiniGame
         private TextMeshProUGUI _textMeshPro;
         public string text = "Test";
         public string value = "";
+        private AudioSource _audio;
+        [SerializeField] private AudioClip PickUpSound;
+        [SerializeField] private AudioClip DropSound;
         private void Start()
         {
             _rectTransform = GetComponent<RectTransform>();
             _canvas = GetComponentInParent<Canvas>();
             _canvasGroup = GetComponent<CanvasGroup>();
             _textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
+            _audio = GetComponent<AudioSource>();
         }
 
         public void OnPointerDown(PointerEventData eventData)
@@ -29,11 +33,15 @@ namespace PirateMiniGame
         public void OnBeginDrag(PointerEventData eventData)
         {
             _canvasGroup.blocksRaycasts = false;
+            _audio.clip = PickUpSound;
+            _audio.Play();
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
             _canvasGroup.blocksRaycasts = true;
+            _audio.clip = DropSound;
+            _audio.Play();
         }
 
         public void OnDrag(PointerEventData eventData)
