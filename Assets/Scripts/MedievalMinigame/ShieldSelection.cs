@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using CamSystem;
 
 public class ShieldSelection : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -34,6 +35,7 @@ public class ShieldSelection : MonoBehaviour, IPointerDownHandler, IPointerEnter
     {
         if (canBeSelectedInWorkshop)
         {
+            GameObject.FindObjectOfType<CameraAnchorManager>().ActivatePreviousAnchor();
             Shield = FindObjectOfType<Shield>();
             Shield.ChangeShieldType(gameObject);
         }
