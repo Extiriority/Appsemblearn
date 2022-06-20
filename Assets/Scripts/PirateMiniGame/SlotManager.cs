@@ -21,6 +21,7 @@ namespace PirateMiniGame
         [SerializeField] private Animator _keyAnimator;
         [SerializeField] private Animator _chestAnimator;
         private AudioSource _audio;
+        [SerializeField] private Canvas mainCanvas; 
         private void Start()
         {
             _slots = new CodeBlockSlot[AmountOfSlots];
@@ -61,11 +62,11 @@ namespace PirateMiniGame
 
         private void OnValidate()
         {
-            if (AmountOfSlots == 0) return;
+            //if (AmountOfSlots == 0) return;
             
-            SetVars();
-            RemoveSlots();
-            PlaceSlots();
+            //SetVars();
+            //RemoveSlots();
+            //PlaceSlots();
         }
 
         private void SetVars()
@@ -113,7 +114,7 @@ namespace PirateMiniGame
 
             if (solved)
             {
-                ToMainMenu();
+               Invoke(nameof(ToMainCanvas), 4f);
             }
         }
 
@@ -134,14 +135,14 @@ namespace PirateMiniGame
             _chestAnimator.SetBool("TurnChest", false);
         }
 
-        private void ToMainMenu()
-        {
-            print("Goto main menu");
-        }
-
         private void PlayOpeningSound()
         {
             _audio.Play();
+        }
+
+        private void ToMainCanvas()
+        {
+            mainCanvas.gameObject.SetActive(true);
         }
     }
 }

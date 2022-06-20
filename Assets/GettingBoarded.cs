@@ -24,21 +24,14 @@ public class GettingBoarded : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D player)
     {
-        
         if (enemyHealth.enemyHealth == 0)
         {
-            
             if (player.gameObject.tag == "Player")
             {
-                print("hallo");
                 startCanvas.SetActive(false);
                 lockPickingCanvas.SetActive(true);
+                Destroy(gameObject);
             }
         }
-
-        
-
-
-
     }
 }
