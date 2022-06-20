@@ -23,40 +23,32 @@ public class DialogueUI : MonoBehaviour
     public bool IsOpen { get; private set; }
     private TypeWriterEffect typeWriterEffect;
 
-    private void Start() 
-    {
+    private void Start() {
         answerHandler = GetComponent<AnswerHandler>();
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         ShowDialogue(dialogueObject);
     }
  
-    public void ShowDialogue(DialogueObject dialogueObject) 
-    {
+    public void ShowDialogue(DialogueObject dialogueObject) {
         IsOpen = true;
         dialogueBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObject));
     }
 
-    private IEnumerator StepThroughDialogue(DialogueObject dialogueObject) 
-    {
+    private IEnumerator StepThroughDialogue(DialogueObject dialogueObject) {
         //Looping through dialogue and running through it again when spacebar is clicked.
-        for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
-        {
+        for (int i = 0; i < dialogueObject.Dialogue.Length; i++) {
             string dialogue = dialogueObject.Dialogue[i];
             textLabel.text = dialogue;
             yield return RunTypingEffect(dialogue);
 
-            if (i == dialogueObject.Dialogue.Length && dialogueObject.HasAnswers)
-            {
-                break;
-            }
-
+            if (i == dialogueObject.Dialogue.Length && dialogueObject.HasAnswers) break;
+            
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
 
         //If the dialogue is a question that can be answered, activate up button and show answers
-        if (dialogueObject.HasAnswers)
-        {
+        if (dialogueObject.HasAnswers) {
             up.SetActive(true);
 
             answerAnimationController.ShowAnswers();
@@ -69,11 +61,9 @@ public class DialogueUI : MonoBehaviour
 
 
     //Calls the typewriter effect and allows you to stop dialogue when space bar is clicked.
-    private IEnumerator RunTypingEffect(string dialogue) 
-    {
+    private IEnumerator RunTypingEffect(string dialogue) {
         typeWriterEffect.run(dialogue, textLabel);
-        while (typeWriterEffect.isRunning) 
-        {
+        while (typeWriterEffect.isRunning) {
             yield return null;
             if (Input.GetKeyDown(KeyCode.Space)) {
                 typeWriterEffect.Stop();
