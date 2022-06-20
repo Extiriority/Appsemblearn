@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Animation : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class Animation : MonoBehaviour
     private static readonly int iceClick = Animator.StringToHash("IceClick");
     private static readonly int lavaClick = Animator.StringToHash("LavaClick");
     private static readonly int medievalClick = Animator.StringToHash("MedievalClick");
+    private static readonly int startClick = Animator.StringToHash("startClick");
 
     private void Awake() {
         anim = GetComponent<Animator>();
@@ -18,6 +21,27 @@ public class Animation : MonoBehaviour
     public void Pressed() {
         anim.SetBool(onClick, true);
     }
+    
+    public void MedievalClick() {
+        anim.SetTrigger(startClick);
+        StartCoroutine(waitTransitionMedieval());
+    }
+
+    private IEnumerator waitTransitionMedieval() {
+        yield return new WaitForSeconds(1.2f);
+        SceneManager.LoadScene(2);
+    }
+    
+    public void PirateClick() {
+        anim.SetTrigger(startClick);
+        StartCoroutine(waitTransitionPirate());
+    }
+
+    private IEnumerator waitTransitionPirate() {
+        yield return new WaitForSeconds(1.2f);
+        SceneManager.LoadScene(1);
+    }
+
     
     public void MedievalPressed() {
         anim.SetBool(tutorialClick, false);
