@@ -2964,9 +2964,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8582380977503520514}
-        m_TargetAssemblyTypeName: LevelSelection, Assembly-CSharp
-        m_MethodName: LoadTutorialLevel
+      - m_Target: {fileID: 2125690959}
+        m_TargetAssemblyTypeName: Animation, Assembly-CSharp
+        m_MethodName: PirateClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5358,8 +5358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -965.0001, y: 0}
-  m_SizeDelta: {x: 1170.0217, y: 681.8243}
+  m_AnchoredPosition: {x: -955.5698, y: 0}
+  m_SizeDelta: {x: 1188.8823, y: 681.8243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683656636
 MonoBehaviour:
@@ -8241,9 +8241,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8524063077083194766}
-        m_TargetAssemblyTypeName: LevelSelection, Assembly-CSharp
-        m_MethodName: LoadMedievalLevel
+      - m_Target: {fileID: 2125690959}
+        m_TargetAssemblyTypeName: Animation, Assembly-CSharp
+        m_MethodName: MedievalClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18952,9 +18952,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8582380977503520514}
-        m_TargetAssemblyTypeName: LevelSelection, Assembly-CSharp
-        m_MethodName: LoadTutorialLevel
+      - m_Target: {fileID: 2125690959}
+        m_TargetAssemblyTypeName: Animation, Assembly-CSharp
+        m_MethodName: TutorialClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
