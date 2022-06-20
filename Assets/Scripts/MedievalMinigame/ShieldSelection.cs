@@ -13,6 +13,10 @@ public class ShieldSelection : MonoBehaviour, IPointerDownHandler, IPointerEnter
     [SerializeField] bool canBeSelectedInWorkshop;
     [SerializeField] public GameObject shield;
 
+    [SerializeField] GameObject leftUI;
+    [SerializeField] GameObject rightUI;
+
+    [SerializeField] TextMeshProUGUI text;
     Shield Shield;
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -35,9 +39,13 @@ public class ShieldSelection : MonoBehaviour, IPointerDownHandler, IPointerEnter
     {
         if (canBeSelectedInWorkshop)
         {
-            GameObject.FindObjectOfType<CameraAnchorManager>().ActivatePreviousAnchor();
             Shield = FindObjectOfType<Shield>();
             Shield.ChangeShieldType(gameObject);
+            leftUI.SetActive(true);
+            rightUI.SetActive(true);
+
+            text.text = this.gameObject.name;
+            GameObject.FindObjectOfType<CameraAnchorManager>().ActivatePreviousAnchor();
         }
         
 

@@ -3,13 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class OnClick : MonoBehaviour, IPointerDownHandler
 {
-    [SerializeField] GameObject UI;
+    [SerializeField] GameObject leftUI;
+    [SerializeField] GameObject rightUI;
+
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        UI.SetActive(false);
+
+        leftUI.SetActive(false);
+        rightUI.SetActive(false);
         gameObject.GetComponentInChildren<CinemachineVirtualCamera>().Priority = 11;
     }
 }
