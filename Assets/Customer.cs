@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-    [SerializeField] private ShieldSO requestedShield;
+    [SerializeField] public ShieldSO requestedShield;
 }

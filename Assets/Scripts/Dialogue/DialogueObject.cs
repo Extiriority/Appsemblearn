@@ -10,7 +10,12 @@ public class DialogueObject : ScriptableObject
     [SerializeField]
     public Question question;
 
-    public string[] Dialogue => dialogue;
+    public string[] Dialogue
+    {
+        get => dialogue;
+        set => dialogue = value;
+    }
+
     public bool HasAnswers => Questions != null && Questions.Length > 0;
     public Question[] Questions => questions;    
 }
