@@ -17,7 +17,7 @@ namespace CamSystem
             _cameraAnchors = GetComponentsInChildren<CinemachineVirtualCamera>().ToList();
             _cameraPanners = GetComponentsInChildren<CameraPanner>().ToList();
             DisableAllAnchors();
-            ActivateFirstAnchor();
+            ActivateAnchor(0);
         }
 
         private void Update()
@@ -59,11 +59,6 @@ namespace CamSystem
             DisableAllAnchors();
             _cameraAnchors[anchorIndex].enabled = true;
             _cameraPanners[anchorIndex].enabled = true;
-        }
-
-        private void ActivateFirstAnchor()
-        {
-            ActivateAnchor(0);
         }
     }
 }
