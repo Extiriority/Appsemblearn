@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class CustomerManager : MonoBehaviour
@@ -8,14 +11,29 @@ public class CustomerManager : MonoBehaviour
     private Animator animator;
 
     [Header("All potential customers")]
-    [SerializeField] private GameObject[] customerList;
-    [SerializeField] private GameObject currentCustomer;
-    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private ShieldSO[] requestList;
+    [SerializeField] private Customer currentCustomer;
+    [SerializeField] private GameObject customerUI;
+    
+    public GameObject dialogueBox;
+    
+    [Header("Request fields")]
+    public GameObject requestBox;
+    public TextMeshProUGUI colorBox;
+    public TextMeshProUGUI typeBox;
+    public TextMeshProUGUI iconBox;
 
     private void Start()
     {
-        currentCustomer = customerList[0];
+        SetRandomCustomer();
         animator = currentCustomer.GetComponent<Animator>();
+    }
+
+    private void SetRandomCustomer()
+    {
+        System.Random rnd = new();
+        int index = rnd.Next(requestList.Length);
+        currentCustomer.requestedShield = requestList[index];
     }
 
     private void Update()
@@ -39,6 +57,21 @@ public class CustomerManager : MonoBehaviour
         yield return new WaitForSeconds(_delay);
 
         //Enable Dialogue
-        dialogueBox.SetActive(true);
+        customerUI.SetActive(true);
+    }
+
+    public void ShowRequestedItem()
+    {
+        dialogueBox.SetActive(false);
+        requestBox.SetActive(true);
+        Customer customer = currentCustomer.GetComponent<Customer>();
+        colorBox.text = "Color: " + "#" + ColorUtility.ToHtmlStringRGB(customer.requestedShield.color); 
+        typeBox.text =  "Type: " + customer.requestedShield.shieldType.name.ToString();
+        iconBox.text =  "Icon: " + customer.requestedShield.icon.ToString();
+    }
+
+    public void HideUi()
+    {
+        customerUI.SetActive(false);
     }
 }

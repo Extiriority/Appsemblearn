@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject customer;
     [SerializeField] public DialogueObject dialogueObject;
     [SerializeField] private TMP_Text textLabel;
+    public UnityEvent onDialogueEnded;
     public bool IsOpen { get; private set; }
     private TypeWriterEffect typeWriterEffect;
 
@@ -26,7 +27,7 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(StepThroughDialogue(dialogueObject));
     }
 
-    private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
+    public IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
     {
         //Looping through dialogue and running through it again when spacebar is clicked.
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
@@ -39,11 +40,12 @@ public class Dialogue : MonoBehaviour
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
 
+        onDialogueEnded.Invoke();
     }
 
 
     //Calls the typewriter effect and allows you to stop dialogue when space bar is clicked.
-    private IEnumerator RunTypingEffect(string dialogue)
+    public IEnumerator RunTypingEffect(string dialogue)
     {
         typeWriterEffect.run(dialogue, textLabel);
         while (typeWriterEffect.isRunning)

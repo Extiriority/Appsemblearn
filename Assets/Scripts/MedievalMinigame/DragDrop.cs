@@ -10,6 +10,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private CanvasGroup canvasGroup;
     private Vector3 startingPos;
 
+    [Header("Type")]
+    [SerializeField] public Types dropboxType = new Types();
+
+
     [Header("Shield Properties")]
     [SerializeField] public GameObject shield;
     [SerializeField] public Color color;
