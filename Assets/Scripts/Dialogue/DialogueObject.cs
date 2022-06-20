@@ -1,5 +1,5 @@
-using CamSystem;
 using UnityEngine;
+
 [CreateAssetMenu(menuName = "Dialogue/DialogueObject")]
 public class DialogueObject : ScriptableObject
 {
