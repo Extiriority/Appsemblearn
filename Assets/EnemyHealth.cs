@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D playerBullet)
     {
         
-        if (shooting.bulletType == vulnerability)
+        if (shooting.currentBulletType == vulnerability)
         {
             if (playerBullet.tag == "PlayerBullet")
             {

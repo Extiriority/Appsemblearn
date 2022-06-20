@@ -10,10 +10,17 @@ public class Shooting : MonoBehaviour
     public Transform FirePoint2;
     public GameObject bulletPrefab;
     public GameObject bulletPrefab2;
-    [SerializeField] public float bulletType = 1;
+    [SerializeField] public float currentBulletType = 1;
     public Transform Canvas;
     private bool CanShoot = true;
-    
+
+    public bool bullet1Selected = false;
+    public bool bullet2Selected = false;
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,14 +68,40 @@ public class Shooting : MonoBehaviour
     }
 
 
+
     public void SetBulletTo1 ()
     {
-        bulletType = 1;
+        if (bullet1Selected == true)
+        {
+            currentBulletType = 1;
+        }
+
+        bullet1Selected = false;
     }
 
     public void SetBulletTo2()
     {
-        bulletType = 2;
+        if (bullet2Selected == true)
+        {
+            currentBulletType = 2;
+        }
+
+        bullet2Selected = false;
+    }
+
+   
+
+
+    public void SelectBullet1()
+    {
+        bullet1Selected = true;
+        bullet2Selected = false;
+    }
+
+    public void SelectBullet2()
+    {
+        bullet2Selected = true;
+        bullet1Selected = false;
     }
 }
 
