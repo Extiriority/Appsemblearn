@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Answer - Nee
   m_EditorClassIdentifier: 
   dialogue:
-  - "Oh nou dan niet h\xE9"
-  - Maar goed dan kom je natuurlijk nergens.
+  - okay, als je verder wilt, mag je de pijl naast mijn hoofd klikken.
   questions:
   - {fileID: 11400000, guid: 9439f2ee3e1c1074e8804c9a069d69e7, type: 2}
   question: {fileID: 11400000, guid: 9439f2ee3e1c1074e8804c9a069d69e7, type: 2}

@@ -40,6 +40,8 @@ namespace CamSystem
         [Header("Events")]
         [Tooltip("This event triggers when the camera blend is finished")]
         public UnityEvent onCameraTransitionEnded;
+        
+        public UnityEvent OnClick;
 
         public PlayableDirector playableDirector;
 
@@ -146,22 +148,21 @@ namespace CamSystem
             soundManager.SetActive(true);
             _panner.enabled = false;
         }
-        
-        public void ActivateAnchor()
+
+        private void ActivateAnchor()
         {
             if (gameObject.GetComponentInChildren<CinemachineSmoothPath>())
             {
                 print("has smooth");
                 _anchorManager.ActivateAnchor(2);
                 playableDirector.Play();
-                return;
             }
             else
             {
                 ToggleVCam();
                 InvokeEvents();
+                OnClick.Invoke();
                 _anchorManager.SetCurrentAnchor(this);
-                return;
             }
         }
     }

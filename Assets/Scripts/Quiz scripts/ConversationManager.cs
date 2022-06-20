@@ -47,27 +47,16 @@ public class ConversationManager : MonoBehaviour
         if (!questionQueue.Any()) return false; 
 
         questionQueue.Dequeue();
-        for (int i = 0; i < questionList.Count; i++)
-        {
-            if (questionList.Count != 0)
-            {
-                if (questionQueue.Any())
-                {
-                    var next = questionQueue.Peek();
-                    if (currectQuestion != next)
-                    {
-                        currectQuestion = next;
-                        answerHandler.BindingDataToUI();
-                        return true;
-                    }
-                }
-                else
-                {
-                    gameObject.SetActive(false);
-                    return false;
-
-                }
+        foreach (var t in questionList.Where(t => questionList.Count != 0)) {
+            if (questionQueue.Any()) {
+                var next = questionQueue.Peek();
+                if (currectQuestion == next) continue;
+                currectQuestion = next;
+                answerHandler.BindingDataToUI();
+                return true;
             }
+            gameObject.SetActive(false);
+            return false;
         }
         return false;
     }

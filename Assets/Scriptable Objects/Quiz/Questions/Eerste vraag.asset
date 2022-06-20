@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450f59b43e3a7034198e66ece1c0a90d, type: 3}
   m_Name: Eerste vraag
   m_EditorClassIdentifier: 
-  questionString: Ben jij klaar voor jou avontuur?
+  questionString: Ben jij klaar voor jou wonderbaarlijke avontuur op deze Eiland?
   answers:
   - {fileID: 11400000, guid: 9a1b01d8c7c735e44acffd55dc57f543, type: 2}
   - {fileID: 11400000, guid: a700569f5aa764949917e4148622adb6, type: 2}

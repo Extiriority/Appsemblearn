@@ -10,7 +10,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private CanvasGroup canvasGroup;
     private Vector3 startingPos;
 
-    [SerializeField] public Shield shield;
+    [Header("Shield Properties")]
+    [SerializeField] public GameObject shield;
+    [SerializeField] public Color color;
+    [SerializeField] public GameObject icon;
 
     private void Start()
     {
