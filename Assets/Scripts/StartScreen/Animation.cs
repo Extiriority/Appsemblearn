@@ -12,7 +12,7 @@ public class Animation : MonoBehaviour
     private static readonly int iceClick = Animator.StringToHash("IceClick");
     private static readonly int lavaClick = Animator.StringToHash("LavaClick");
     private static readonly int medievalClick = Animator.StringToHash("MedievalClick");
-    private static readonly int startClick = Animator.StringToHash("startClick");
+    private static readonly int startClick = Animator.StringToHash("StartClick");
 
     private void Awake() {
         anim = GetComponent<Animator>();
@@ -28,7 +28,7 @@ public class Animation : MonoBehaviour
     }
 
     private IEnumerator waitTransitionMedieval() {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(.8f);
         SceneManager.LoadScene(2);
     }
     

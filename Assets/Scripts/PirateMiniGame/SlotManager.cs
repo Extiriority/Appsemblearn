@@ -10,6 +10,7 @@ namespace PirateMiniGame
 {
     public class SlotManager : MonoBehaviour
     {
+        public UnityEvent OnEnd;
         [ItemCanBeNull] private CodeBlockSlot[] _slots;
         [ItemCanBeNull] public string[] _slotValues;
         public int AmountOfSlots = 4;
@@ -21,7 +22,8 @@ namespace PirateMiniGame
         [SerializeField] private Animator _keyAnimator;
         [SerializeField] private Animator _chestAnimator;
         private AudioSource _audio;
-        [SerializeField] private Canvas mainCanvas; 
+        [SerializeField] private Canvas mainCanvas;
+
         private void Start()
         {
             _slots = new CodeBlockSlot[AmountOfSlots];
@@ -113,9 +115,8 @@ namespace PirateMiniGame
             Invoke(nameof(ResetAnimations),4f);
 
             if (solved)
-            {
-               Invoke(nameof(ToMainCanvas), 4f);
-            }
+                OnEnd.Invoke();
+            
         }
 
         private IEnumerator SetFeedbackText(string text, float delay)
@@ -138,11 +139,6 @@ namespace PirateMiniGame
         private void PlayOpeningSound()
         {
             _audio.Play();
-        }
-
-        private void ToMainCanvas()
-        {
-            mainCanvas.gameObject.SetActive(true);
         }
     }
 }
