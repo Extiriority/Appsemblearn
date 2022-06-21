@@ -22,26 +22,38 @@ public class Animation : MonoBehaviour
         anim.SetBool(onClick, true);
     }
     
-    public void MedievalClick() {
+    public void TutorialClick() {
+        SoundManager.instance.play("Select");
         anim.SetTrigger(startClick);
-        StartCoroutine(waitTransitionMedieval());
+        StartCoroutine(waitTransitionTutorial());
     }
 
-    private IEnumerator waitTransitionMedieval() {
-        yield return new WaitForSeconds(.8f);
-        SceneManager.LoadScene(2);
+    private IEnumerator waitTransitionTutorial() {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(1);
     }
-    
+
     public void PirateClick() {
+        SoundManager.instance.play("Select");
         anim.SetTrigger(startClick);
         StartCoroutine(waitTransitionPirate());
     }
 
     private IEnumerator waitTransitionPirate() {
-        yield return new WaitForSeconds(1.2f);
-        SceneManager.LoadScene(1);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(2);
+    }
+    
+    public void MedievalClick() {
+        SoundManager.instance.play("Select");
+        anim.SetTrigger(startClick);
+        StartCoroutine(waitTransitionMedieval());
     }
 
+    private IEnumerator waitTransitionMedieval() {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(3);
+    }
     
     public void MedievalPressed() {
         anim.SetBool(tutorialClick, false);

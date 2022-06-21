@@ -16,7 +16,9 @@ MonoBehaviour:
   - Goed om te horen!
   - We gaan jou klaar stampen om een coding god te worden, no worries!
   - Hier in Appsemblearn HQ zal je de belangrijkste informatie te horen krijgen.
-  - 'Je kan je door de wereld navigeren door de pijlen hier rechts van mijn. '
+  - 'Je kan je door de wereld navigeren door de pijlen hier rechts van mij te klikken. '
+  - Je zal nu terug in de wereld overview belanden waar jij Pirate of Medieval gebied
+    kan ontdekken!
   questions:
   - {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
   question: {fileID: 11400000, guid: f5f573fc96a1453499eaa8e5bcf8e63e, type: 2}
