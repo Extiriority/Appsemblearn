@@ -40,6 +40,7 @@ public class Dialogue : MonoBehaviour
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
 
+        SoundManager.instance.changeVolume("Theme", 0.25f);
         onDialogueEnded.Invoke();
     }
 

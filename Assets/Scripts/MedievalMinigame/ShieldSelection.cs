@@ -44,6 +44,7 @@ public class ShieldSelection : MonoBehaviour, IPointerDownHandler, IPointerEnter
             leftUI.SetActive(true);
             rightUI.SetActive(true);
 
+            SoundManager.instance.play("ShieldSelect");
             text.text = this.gameObject.name;
             GameObject.FindObjectOfType<CameraAnchorManager>().ActivatePreviousAnchor();
         }

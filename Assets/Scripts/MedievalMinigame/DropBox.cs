@@ -24,6 +24,7 @@ public class DropBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoint
             {
                 Shield = FindObjectOfType<Shield>();
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
+                SoundManager.instance.play("DropInsideBox");
 
 
                 if (dragDrop.shield != null)
