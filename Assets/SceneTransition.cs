@@ -14,6 +14,12 @@ public class SceneTransition : MonoBehaviour
 
     public void TryAgain()
     {
+        Invoke("DisableCanvas", 1f);
         ani.SetTrigger("FadeOut");
+    }
+
+    void DisableCanvas()
+    {
+        this.gameObject.GetComponentInParent<Canvas>().gameObject.SetActive(false);
     }
 }
