@@ -27,6 +27,9 @@ public class OptionSelector : MonoBehaviour
 
     public GameObject objectToEnable;
 
+    public bool isIntro;
+    public bool isBox;
+
     //Event Functions
     void Start()
     {
@@ -49,7 +52,17 @@ public class OptionSelector : MonoBehaviour
         {
             panels.SetActive(false);
         }
+
         objectToEnable.SetActive(true);
+
+        if (isBox) SoundManager.instance.play("BoxSelect");
+
+        if (isIntro)
+        {
+            objectToEnable.GetComponent<Dialogue>().customer.GetComponent<Animator>().enabled = true;
+            SoundManager.instance.changeVolume("Theme", 0.1f);
+        }
+       
     }
 
     private void OnMouseEnter()

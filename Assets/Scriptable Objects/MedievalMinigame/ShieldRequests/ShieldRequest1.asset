@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ShieldRequest1
   m_EditorClassIdentifier: 
   shieldType: {fileID: 4679612198106234961, guid: 791f0d1f446dc834daf47fd2b1374b76, type: 3}
-  color: {r: 0, g: 1, b: 0.17649412, a: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
   icon: {fileID: 0}

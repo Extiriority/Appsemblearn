@@ -7,7 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     [Header("Dialogue objects")]
     [SerializeField] private GameObject dialogueBox;
-    [SerializeField] private GameObject customer;
+    [SerializeField] public GameObject customer;
     [SerializeField] public DialogueObject dialogueObject;
     [SerializeField] private TMP_Text textLabel;
     public UnityEvent onDialogueEnded;
@@ -40,6 +40,7 @@ public class Dialogue : MonoBehaviour
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
 
+        SoundManager.instance.changeVolume("Theme", 0.25f);
         onDialogueEnded.Invoke();
     }
 

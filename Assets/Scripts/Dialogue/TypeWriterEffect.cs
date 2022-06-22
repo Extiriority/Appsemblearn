@@ -46,7 +46,7 @@ public class TypeWriterEffect : MonoBehaviour
                 }
                 //If its letter -> play Sans SFX
                 if (!textToType[i].Equals(' ') && !textToType[i].Equals(',') && !textToType[i].Equals('.') && !textToType[i].Equals('!') && !textToType[i].Equals('?')) {
-                    SoundManager.instance.play("sans");
+                    SoundManager.instance.play("vocal");
                 }
                 //If its punctuation -> play punctuation SFX
                 if (textToType[i].Equals('.')) {

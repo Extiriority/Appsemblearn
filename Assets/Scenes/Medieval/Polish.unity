@@ -10990,6 +10990,82 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c1f220a2486616447bafffb9a62c3b6d, type: 3}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 430426579172aac438b4f22671a71ed5, type: 3}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: vocal
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aea57902faa2eda44a84094b4aeb5b51, type: 3}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: punctuation
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aea57902faa2eda44a84094b4aeb5b51, type: 3}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Door Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aea57902faa2eda44a84094b4aeb5b51, type: 3}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Door Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.0361
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.0234
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.0361
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.0361
+      objectReference: {fileID: 0}
+    - target: {fileID: 469606886951982463, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.0361
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210281afd4489ac429757c0dfe98183d, type: 3}
 --- !u!1001 &1363302098

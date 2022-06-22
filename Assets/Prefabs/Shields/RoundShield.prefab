@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8081742551684665625}
   - component: {fileID: 8940792193777546157}
   m_Layer: 5
-  m_Name: Shield.fbx
+  m_Name: RoundShield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
