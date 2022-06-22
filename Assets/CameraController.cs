@@ -49,6 +49,6 @@ public class CameraController : MonoBehaviour
         blacksmithDialogue.SetActive(false);
         camToMoveTo.Priority = 11;
         customer.SetActive(true);
-        customerAnimator.GetComponent<Animator>().Play("OpenDoor");
+        customerAnimator.GetComponent<Animator>().enabled = true;
     }
 }
