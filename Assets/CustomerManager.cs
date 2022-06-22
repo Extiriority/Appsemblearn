@@ -49,6 +49,7 @@ public class CustomerManager : MonoBehaviour
         if (animator)
         {
             StartCoroutine(DelayedDialogue(animator.GetCurrentAnimatorStateInfo(0).length));
+            SoundManager.instance.changeVolume("Theme", 0.1f);
         }
     }
 
@@ -73,5 +74,6 @@ public class CustomerManager : MonoBehaviour
     public void HideUi()
     {
         customerUI.SetActive(false);
+        SoundManager.instance.play("ButtonPress");
     }
 }

@@ -13,7 +13,7 @@ public class OnClick : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-
+        SoundManager.instance.play("BoxSelect");
         leftUI.SetActive(false);
         rightUI.SetActive(false);
         gameObject.GetComponentInChildren<CinemachineVirtualCamera>().Priority = 11;
