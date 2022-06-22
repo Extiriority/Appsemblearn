@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/StartScreen.unity
+    path: Assets/Scenes/StartScreen.unity
     guid: 82dd348e39a19724689f50af402be727
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/Tutorial.unity
+    path: Assets/Scenes/Demo.unity
     guid: 205295e88b158be4da66d56d08b105ce
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/Pirate.unity
+    path: Assets/Scenes/PlunderPrototype.unity
     guid: 3a6b31d8769815345806507b84d84977
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/Medieval.unity
+    path: Assets/Scenes/Medieval/Polish.unity
     guid: 14d836ec63c0bb14ea9c0583c235ef7e
   m_configObjects: {}
