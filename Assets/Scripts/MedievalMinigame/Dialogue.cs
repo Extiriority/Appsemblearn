@@ -7,7 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     [Header("Dialogue objects")]
     [SerializeField] private GameObject dialogueBox;
-    [SerializeField] private GameObject customer;
+    [SerializeField] public GameObject customer;
     [SerializeField] public DialogueObject dialogueObject;
     [SerializeField] private TMP_Text textLabel;
     public UnityEvent onDialogueEnded;

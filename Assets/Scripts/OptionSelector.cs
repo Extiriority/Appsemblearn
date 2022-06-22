@@ -49,7 +49,9 @@ public class OptionSelector : MonoBehaviour
         {
             panels.SetActive(false);
         }
+
         objectToEnable.SetActive(true);
+        objectToEnable.GetComponent<Dialogue>().customer.GetComponent<Animator>().enabled = true;
     }
 
     private void OnMouseEnter()
