@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450f59b43e3a7034198e66ece1c0a90d, type: 3}
+  m_Name: Eerste vraag
+  m_EditorClassIdentifier: 
+  questionString: Ben jij klaar voor jou wonderbaarlijke avontuur op deze Eiland?
+  answers:
+  - {fileID: 11400000, guid: 9a1b01d8c7c735e44acffd55dc57f543, type: 2}
+  - {fileID: 11400000, guid: a700569f5aa764949917e4148622adb6, type: 2}
+  - {fileID: 11400000, guid: 1f3da8894f9aea04c86a3e752837a974, type: 2}
+  - {fileID: 11400000, guid: c300b1692061d3f43b1b929390fa0877, type: 2}

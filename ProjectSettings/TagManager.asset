@@ -3,7 +3,26 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - question
+  - answer1
+  - answer2
+  - answer3
+  - answer4
+  - button1
+  - button2
+  - button3
+  - button4
+  - Camera
+  - UpDownButton
+  - Canvas
+  - Enemy
+  - PlayerBullet
+  - Color
+  - ShieldType
+  - OptionPanel
+  - CodeBlockSlot
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -11,7 +30,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Post Processing
   - 
   - 
   - 
